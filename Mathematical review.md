@@ -1,4 +1,4 @@
-# 🧮 UE and SO Objective Function
+# 🧮UE and SO Objective Function
 
 ## Understanding the Mathematical Formulation
 
@@ -10,7 +10,7 @@ $$
 C = \text{Travel Time Cost} + \text{Monetary Cost} + \text{Other Penalties}
 $$
 
----
+
 
 ## User Equilibrium (UE)
 
@@ -29,7 +29,8 @@ It’s the **sum of each link’s cost**.
 - \( t_a \): travel time on link \( a \)  
 - \( A \): the set of all links  
 
----
+
+
 
 ### Travel Time Function
 
@@ -48,7 +49,8 @@ The travel time on each link \( a \) can follow:
 2. **Queue Volume Delay Function (QVDF):**  
    Used when delays are modeled as a function of queue length or volume.
 
----
+
+
 
 ### Full User Equilibrium Objective
 
@@ -67,7 +69,7 @@ where
 - \( N \): set of all users or OD pairs  
 - \( \Psi \): set of available modes  
 
----
+
 
 ## System Optimum (SO)
 
@@ -87,7 +89,7 @@ $$
 \left[\alpha (WT_{m,a} + ST_{m,a}) + C_{m,a}\right] \, x_{a,m}
 $$
 
----
+
 
 ## 💡 Summary
 
@@ -96,11 +98,11 @@ $$
 | **User Equilibrium (UE)** | \( \min \sum_{a \in A} \int_{0}^{x_a} \alpha \, t_a(w) \, dw \) | Each user minimizes their own cost (selfish behavior). |
 | **System Optimum (SO)** | \( \min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a \) | The total system cost is minimized (cooperative behavior). |
 
----
+
 
 **Key Idea:**  
 UE corresponds to *Wardrop’s First Principle* (individual optimization),  
 while SO corresponds to *Wardrop’s Second Principle* (system optimization).
 
----
+
 
