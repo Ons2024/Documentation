@@ -123,6 +123,17 @@ For **System Optimum**, the objective minimizes the total *system travel time co
 $$
 \min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a
 $$
+subject to the **flow conservation** and **link–path** relations:
+
+1. **Demand (path-flow) conservation** for every origin–destination (OD) pair $(r,s)$:
+$$
+\sum_{k\in K_{rs}} f_k^{rs} \;=\; q_{rs}, \qquad \forall (r,s)
+$$
+
+2. **Nonnegativity** of path flows:
+$$
+f_k^{rs} \;\ge\; 0, \qquad \forall (r,s),\; \forall k\in K_{rs}
+$$
 
 ###  Summary
 
