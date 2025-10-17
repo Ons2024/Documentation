@@ -1,8 +1,4 @@
----
-math: true
----
 # UE and SO Objective Function
-
 ## Wardrop’s Principles (1952)
 
 Wardrop proposed two fundamental principles to describe traffic assignment behavior:
