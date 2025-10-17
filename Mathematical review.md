@@ -65,7 +65,7 @@ It’s the **sum of each link’s cost**.
 - $x_a$: flow on link $a$  
 - $t_a$: travel time on link $a$  
 - $A$: the set of all links  
-- $\alpha$: cost  
+- $\alpha$: Monetary cost per unit of time (monetary unit/time unit)  
 
 
 
