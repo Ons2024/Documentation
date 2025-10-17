@@ -73,7 +73,7 @@ The **Beckmann problem is convex**, which guarantees that:
 
 ---
 
-### ✅ Implications
+### Implications
 
 | Property | Meaning |
 |-----------|----------|
@@ -84,14 +84,14 @@ The **Beckmann problem is convex**, which guarantees that:
 
 ---
 
-### 🔗 Summary
+###  Summary
 
 > The **Equilibrium Assignment Problem** is simply the **Beckmann optimization problem** applied to transportation networks.  
 > It provides a mathematical bridge between **individual route choice behavior** (Wardrop) and **system-level flow equilibrium** (convex optimization).
 
 ---
 
-### 📘 Reference
+###  Reference
 
 Beckmann, M.J., McGuire, C.B., & Winsten, C.B. (1956).  
 *Studies in the Economics of Transportation.*  
