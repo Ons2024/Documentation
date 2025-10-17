@@ -27,7 +27,7 @@ Wardrop proposed two fundamental principles to describe traffic assignment behav
 
 
 
-## Comparing UE and SO
+### Comparing UE and SO
 
 | Concept | Objective | Behavior | Result |
 |----------|------------|-----------|---------|
@@ -99,10 +99,7 @@ $$
 \min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a
 $$
 
-
-
 ##  Summary
-
 
 | Concept                   | Objective Function                                          | Interpretation                                             |
 | ------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
