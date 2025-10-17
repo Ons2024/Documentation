@@ -49,7 +49,7 @@ $$
 
 ### User Equilibrium (UE)
 
-In general, the **travel time** (in case we cannot directly measure travel time, we add a weight factor $\alpha$) on a link for *User Equilibrium* is expressed as:
+In general, the **travel time** (in case we want the cost of the travel time, we add a the cost factor $\alpha$) on a link for *User Equilibrium* is expressed as:
 
 
 
