@@ -78,5 +78,4 @@ These assume that perception errors are **unbounded**, which implies that:
 
 This behavior is unrealistic for real-world networks.
 
----
 
