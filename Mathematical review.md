@@ -74,9 +74,6 @@ $$
 x_a \;=\; \sum_{r,s}\sum_{k\in K_{rs}} \delta_{a k}^{rs}\, f_k^{rs}, \qquad \forall a\in A
 $$
 
-(where $\delta_{a k}^{rs}=1$ if link $a$ is on path $k$ of OD $(r,s)$, else $0$).
-
-
 **Optional (if relevant):** link capacity constraints
 $$
 x_a \;\le\; c_a,\qquad \forall a\in A.
@@ -90,7 +87,8 @@ It’s the **sum of each link’s cost**.
 - $x_a$: flow on link $a$  
 - $t_a$: travel time on link $a$  
 - $A$: the set of all links  
-- $\alpha$: Monetary cost per unit of time (monetary unit/time unit)  
+- $\alpha$: Monetary cost per unit of time (monetary unit/time unit) 
+- $\delta_{a k}^{rs}=1$ if link $a$ is on path $k$ of OD $(r,s)$, else $0$
 
 
 
