@@ -71,8 +71,7 @@ When integrated into network models, behavioral models like MNL help simulate **
 2. These flows influence **travel times** (congestion increases travel time).  
 3. The process repeats until an **equilibrium** is reached —  
    where no traveler can improve their travel time by switching routes.  
-   (→ This corresponds to *[[Wardrop’s User Equilibrium]]*.)
-
+   
 ---
 
 ## Other Common Behavioral Models
@@ -106,13 +105,6 @@ Behavioral models vary in complexity and realism. Here are some key examples:
 
 ---
 
-## 🔗 Relation to Equilibrium and Assignment
 
-Behavioral models are the **foundation** of modern equilibrium models such as:
-- [[User Equilibrium (UE) — Path Flow Formulation]]
-- [[Beckmann Formulation]]
-- [[UE and SO Objective Function]]
-
-They describe **how travelers choose** routes, while equilibrium models describe **how these choices interact** with network congestion and capacities.
 
 
