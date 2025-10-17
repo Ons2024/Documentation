@@ -77,7 +77,7 @@ This reflects **rational, selfish driver behavior** under *Wardrop’s first pri
 
 ## 🔗 Relationship to Beckmann’s Formulation
 
-The **[[Beckmann Formulation]]** provides an equivalent *optimization-based representation* of this equilibrium:
+The **[[the Beckmann Problem]]** provides an equivalent *optimization-based representation* of this equilibrium:
 
 $$
 \min \sum_{a \in A} \int_0^{x_a} t_a(w)\, dw
@@ -90,7 +90,7 @@ subject to:
 This problem is **convex**, and its optimality conditions are equivalent to the UE complementarity system above.
 
 For comparison, see also:  
-→ [[UE and SO Objective Function]]
+→ [[Mathematical review]]
 
 ---
 
