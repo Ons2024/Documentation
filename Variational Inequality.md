@@ -14,7 +14,7 @@ Let:
 - \( \mathcal{F} \): the set of **feasible flow vectors** (flows that satisfy demand conservation)
 - \( c(x) \): the **link (or route) cost vector** as a function of the flow \( x \)
 
-Then the **variational inequality problem** \( \text{VI}(c, \mathcal{F}) \) is to find a flow vector  $x^*$ in $mathcal{F}$ such that:
+Then the **variational inequality problem**  $text{VI}(c, \mathcal{F})$  is to find a flow vector  $x^*$ in $mathcal{F}$ such that:
 
 $$
 \langle c(x^*), \, x - x^* \rangle \ge 0, \quad \forall x \in \mathcal{F}
@@ -69,10 +69,10 @@ $$
 $$
 
 where:
-- \( f_k^* \): equilibrium route flow  
-- \( \bar{c}_k(f^*) \): **expected perceived cost** on route \( k \)
+- $f_k^*$: equilibrium route flow  
+- $bar{c}_k(f^*)$: **expected perceived cost** on route  $k$ 
 
-Thus, both UE and SUE share the **same VI structure**, but differ in how \( c_k \) is defined:
+Thus, both UE and SUE share the **same VI structure**, but differ in how  $c_k$  is defined:
 - For **UE** → actual travel cost  
 - For **SUE** → perceived (expected) cost
 
