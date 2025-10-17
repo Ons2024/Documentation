@@ -75,7 +75,7 @@ When integrated into network models, behavioral models like MNL help simulate **
 
 ---
 
-## 🧩 Other Common Behavioral Models
+## Other Common Behavioral Models
 
 Behavioral models vary in complexity and realism. Here are some key examples:
 
