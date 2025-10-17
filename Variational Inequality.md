@@ -27,7 +27,7 @@ $$
 $$
 
 where:
-- \( c_a(x^*) \): travel cost on link \( a \) under equilibrium flow \( x^* \)
+- $c_a(x^*)$: travel cost on link \( a \) under equilibrium flow \( x^* \)
 - \( \langle \cdot, \cdot \rangle \): inner product
 - \( \mathcal{F} \): feasible set of flows that meet all OD demand constraints
 
@@ -57,7 +57,7 @@ If the cost function \( c(x) \) is **monotone** (i.e., increasing with flow), th
 
 ---
 
-## 🎲 Connection to Stochastic User Equilibrium (SUE)
+## Connection to Stochastic User Equilibrium (SUE)
 
 In **SUE**, travelers perceive route costs **with randomness**.  
 Each route has a **choice probability** \( P_k \) depending on its perceived utility.
@@ -78,7 +78,7 @@ Thus, both UE and SUE share the **same VI structure**, but differ in how \( c_k 
 
 ---
 
-## 🧩 Relation to Optimization
+##  Relation to Optimization
 
 If \( c(x) \) derives from a potential function \( Z(x) \):
 
@@ -100,7 +100,7 @@ $$
 
 ---
 
-## 📈 Properties
+##  Properties
 
 | Property | Description |
 |-----------|--------------|
@@ -111,7 +111,7 @@ $$
 
 ---
 
-## 🧮 Geometric Intuition
+##  Geometric Intuition
 
 The VI condition means:
 - The **cost vector** \( c(x^*) \) forms an **acute angle** with every feasible direction \( (x - x^*) \).
@@ -121,7 +121,7 @@ Visually, \( x^* \) lies at a point where the feasible region \( \mathcal{F} \) 
 
 ---
 
-## 🧭 Summary
+##  Summary
 
 | Concept | UE | SUE | VI Representation |
 |----------|----|-----|-------------------|
@@ -130,10 +130,3 @@ Visually, \( x^* \) lies at a point where the feasible region \( \mathcal{F} \) 
 | Deterministic? | ✅ Yes | ❌ No | Unified framework |
 | Equivalent Optimization? | ✅ (Beckmann) | Sometimes (e.g., eUnit-SUE) | General case |
 
----
-
-## 📚 References
-
-- Beckmann, M., McGuire, C., & Winsten, C. (1956). *Studies in the Economics of Transportation.*  
-- Dafermos, S. (1980). *Traffic Equilibrium and Variational Inequalities.*  
-- Sheffi, Y. (1985). *Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods.*
