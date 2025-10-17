@@ -91,6 +91,11 @@ It’s the **sum of each link’s cost**.
 - $\delta_{a k}^{rs}=1$ if link $a$ is on path $k$ of OD $(r,s)$, else $0$
 
 
+#### Short explanation of constraints
+
+- **Demand conservation** ensures all demand $q_{rs}$ between each OD pair is assigned to some path.  
+- **Nonnegativity** prevents negative flows.  
+- **Link–path incidence** enforces consistency: link flows are the sum of path flows that traverse the link.  
 
 ### Travel Time Function
 
