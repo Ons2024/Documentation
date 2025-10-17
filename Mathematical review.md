@@ -143,3 +143,5 @@ $$
 | **System Optimum (SO)**   | $\min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a$             | The total system cost is minimized (cooperative behavior). |
 
 ---
+
+add talk about stochastic
