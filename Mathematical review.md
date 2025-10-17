@@ -2,6 +2,8 @@
 
 ## Understanding the Mathematical Formulation
 
+
+
 ### 1. Generalized Cost
 
 The **generalized cost** is defined as the normalized sum of *travel*, *waiting*, *service*, and *monetary* costs:
@@ -92,7 +94,14 @@ $$
 
 ##  Summary
 
+
 | Concept | Objective Function | Interpretation |
 |----------|--------------------|----------------|
 | **User Equilibrium (UE)** | $\min \sum_{a \in A} \int_{0}^{x_a} \alpha \, t_a(w) \, dw$ | Each user minimizes their own cost (selfish behavior). |
-| **System Optimum (SO)** | $\min \sum_{a_
+| **System Optimum (SO)** | $\min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a$ | The total system cost is minimized (cooperative behavior). |
+
+---
+
+**Key Idea:**  
+UE corresponds to *Wardrop’s First Principle* (**individual optimization**),  
+while SO corresponds to *Wardrop’s Second Principle* (**system optimization**).
