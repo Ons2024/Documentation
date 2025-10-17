@@ -36,7 +36,7 @@ where:
 ##  Interpretation (Traffic Context)
 
 At **equilibrium**, no traveler can improve their travel cost (or perceived utility) by unilaterally changing routes.  
-This means the current flow pattern \( $x^*$ satisfies the VI condition — i.e., any feasible deviation $x - x^*$ cannot *decrease* total travel cost.
+This means the current flow pattern $x^*$ satisfies the VI condition — i.e., any feasible deviation $x - x^*$ cannot *decrease* total travel cost.
 
 ---
 
