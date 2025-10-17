@@ -1,8 +1,6 @@
 # UE and SO Objective Function
 
-## Understanding the Mathematical Formulation
-
-Wardrop’s Principles (1952)
+## Wardrop’s Principles (1952)
 
 Wardrop proposed two fundamental principles to describe traffic assignment behavior:
 
@@ -29,15 +27,16 @@ Wardrop proposed two fundamental principles to describe traffic assignment behav
 
 
 
-## ⚖️ Comparing UE and SO
+## Comparing UE and SO
 
 | Concept | Objective | Behavior | Result |
 |----------|------------|-----------|---------|
 | **User Equilibrium (UE)** | Each user minimizes **individual cost** | Selfish behavior | Stable, but possibly inefficient (congestion may persist) |
 | **System Optimum (SO)** | Minimize **total system cost** | Cooperative behavior | Efficient but may require coordination or control (e.g., tolls) |
 
----
 
+
+## Understanding the Mathematical Formulation
 
 ### 1. Generalized Cost
 
