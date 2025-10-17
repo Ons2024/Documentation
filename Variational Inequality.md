@@ -11,10 +11,10 @@ It is particularly useful when the relationship between **link flows** and **tra
 ##  Basic Idea
 
 Let:
-- \( \mathcal{F} \): the set of **feasible flow vectors** (flows that satisfy demand conservation)
-- \( c(x) \): the **link (or route) cost vector** as a function of the flow \( x \)
+- $mathcal{F}$ : the set of **feasible flow vectors** (flows that satisfy demand conservation)
+- $c(x)$: the **link (or route) cost vector** as a function of the flow $x$
 
-Then the **variational inequality problem**  $text{VI}(c, \mathcal{F})$  is to find a flow vector  $x^*$ in $mathcal{F}$ such that:
+Then the **variational inequality problem**  ${VI}(c, \mathcal{F})$  is to find a flow vector  $x^*$ in $mathcal{F}$ such that:
 
 $$
 \langle c(x^*), \, x - x^* \rangle \ge 0, \quad \forall x \in \mathcal{F}
@@ -36,7 +36,7 @@ where:
 ##  Interpretation (Traffic Context)
 
 At **equilibrium**, no traveler can improve their travel cost (or perceived utility) by unilaterally changing routes.  
-This means the current flow pattern \( x^* \) satisfies the VI condition — i.e., any feasible deviation $x - x^*$ cannot *decrease* total travel cost.
+This means the current flow pattern \( $x^*$ satisfies the VI condition — i.e., any feasible deviation $x - x^*$ cannot *decrease* total travel cost.
 
 ---
 
