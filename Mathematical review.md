@@ -38,7 +38,7 @@ Wardrop proposed two fundamental principles to describe traffic assignment behav
 
 ## Understanding the Mathematical Formulation
 
-### 1. Generalized Cost
+### Generalized Cost
 
 The **generalized cost** is defined as the normalized sum of *travel*, *waiting*, *service*, and *monetary* costs:
 
@@ -47,8 +47,7 @@ C = \text{Travel Time Cost} + \text{Monetary Cost} + \text{Other Penalties}
 $$
 
 
-
-## User Equilibrium (UE)
+### User Equilibrium (UE)
 
 In general, the **travel time** (in case we cannot directly measure travel time, we add a weight factor $\alpha$) on a link for *User Equilibrium* is expressed as:
 
