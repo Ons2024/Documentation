@@ -65,7 +65,7 @@ It’s the **sum of each link’s cost**.
 - $x_a$: flow on link $a$  
 - $t_a$: travel time on link $a$  
 - $A$: the set of all links  
-- $ \alpha $ 
+- $\alpha$: cost  
 
 
 
@@ -90,7 +90,7 @@ The travel time on each link $a$ can follow:
 
 
 
-## System Optimum (SO)
+### System Optimum (SO)
 
 For **System Optimum**, the objective minimizes the total *system travel time cost* on each link:
 
@@ -98,7 +98,7 @@ $$
 \min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a
 $$
 
-##  Summary
+###  Summary
 
 | Concept                   | Objective Function                                          | Interpretation                                             |
 | ------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
