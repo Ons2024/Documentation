@@ -90,24 +90,6 @@ The travel time on each link $a$ can follow:
 
 
 
-### Full User Equilibrium Objective
-
-$$
-\min Z_{UE} = 
-\sum_{n \in N} \sum_{a \in A_n} \int_0^{x_a} \alpha \, t_{a,n}(\omega) \, d\omega 
-+ 
-\sum_{a \in A} \sum_{m \in \Psi} 
-\left[\alpha (WT_{m,a} + ST_{m,a}) + C_{m,a}\right] \, x_{a,m}
-$$
-
-where  
-- $WT_{m,a}$: waiting time on mode $m$, link $a$  
-- $ST_{m,a}$: service time  
-- $C_{m,a}$: monetary cost  
-- $N$: set of all users or OD pairs  
-- $\Psi$: set of available modes  
-
-
 
 ## System Optimum (SO)
 
@@ -115,16 +97,6 @@ For **System Optimum**, the objective minimizes the total *system travel time co
 
 $$
 \min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a
-$$
-
-Or equivalently:
-
-$$
-\min Z_{SO} =
-\sum_{n \in N} \sum_{a \in A_n} \alpha \, t_{a,n}(x_a) \, x_a 
-+ 
-\sum_{a \in A} \sum_{m \in \Psi} 
-\left[\alpha (WT_{m,a} + ST_{m,a}) + C_{m,a}\right] \, x_{a,m}
 $$
 
 
@@ -136,9 +108,3 @@ $$
 | ------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
 | **User Equilibrium (UE)** | $\min \sum_{a \in A} \int_{0}^{x_a} \alpha \, t_a(w) \, dw$ | Each user minimizes their own cost (selfish behavior).     |
 | **System Optimum (SO)**   | $\min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a$             | The total system cost is minimized (cooperative behavior). |
-
----
-
-**Key Idea:**  
-UE corresponds to *Wardrop’s First Principle* (**individual optimization**),  
-while SO corresponds to *Wardrop’s Second Principle* (**system optimization**).
