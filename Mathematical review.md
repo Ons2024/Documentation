@@ -93,7 +93,7 @@ It’s the **sum of each link’s cost**.
 
 #### Short explanation of constraints
 
-- **Demand conservation** Total flow entering a node = total flow leaving the node.  
+- **Path-flow conservation** Total flow entering a node = total flow leaving the node.  
 - **Nonnegativity** prevents negative flows.  
 - **Link–path incidence** enforces consistency: link flows are the sum of path flows that traverse the link.  
 
