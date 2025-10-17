@@ -6,7 +6,7 @@ Beckmann, McGuire, and Winsten (1956) showed that **Wardrop’s First Principle*
 ---
 
 ### Conceptual Link
-[[]]
+[[Mathematical review]]
 - **Wardrop’s User Equilibrium (UE):**
   > No traveler can reduce their travel cost by unilaterally changing routes.
 
