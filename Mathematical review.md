@@ -2,6 +2,41 @@
 
 ## Understanding the Mathematical Formulation
 
+Wardrop’s Principles (1952)
+
+Wardrop proposed two fundamental principles to describe traffic assignment behavior:
+
+1. **First Principle – User Equilibrium (UE):**  
+   Every traveler seeks to minimize their **own travel cost** (time, money, or generalized cost).  
+   At equilibrium, **no traveler can reduce their travel cost by unilaterally changing routes**.  
+   - This is analogous to **Nash Equilibrium** in game theory.  
+   - All used routes between an origin–destination (OD) pair have **equal and minimal travel costs**.
+
+   Mathematically:  
+   If $c_k$ is the cost of route $k$ between OD pair $(r,s)$, then in equilibrium:
+   $$
+   c_k = c_{rs}^* \quad \text{for all used routes } k,
+   $$
+   and  
+   $$
+   c_k \ge c_{rs}^* \quad \text{for all unused routes.}
+   $$
+
+2. **Second Principle – System Optimum (SO):**  
+   Travelers act **cooperatively** to minimize the **total system cost** (the sum of all users’ travel times or costs).  
+   - This represents the **socially optimal** traffic pattern.  
+   - Some individuals might take longer routes to improve overall efficiency.
+
+
+
+## ⚖️ Comparing UE and SO
+
+| Concept | Objective | Behavior | Result |
+|----------|------------|-----------|---------|
+| **User Equilibrium (UE)** | Each user minimizes **individual cost** | Selfish behavior | Stable, but possibly inefficient (congestion may persist) |
+| **System Optimum (SO)** | Minimize **total system cost** | Cooperative behavior | Efficient but may require coordination or control (e.g., tolls) |
+
+---
 
 
 ### 1. Generalized Cost
