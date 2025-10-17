@@ -105,3 +105,4 @@ $$
 | ------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
 | **User Equilibrium (UE)** | $\min \sum_{a \in A} \int_{0}^{x_a} \alpha \, t_a(w) \, dw$ | Each user minimizes their own cost (selfish behavior).     |
 | **System Optimum (SO)**   | $\min \sum_{a \in A} \alpha \, t_a(x_a) \, x_a$             | The total system cost is minimized (cooperative behavior). |
+
