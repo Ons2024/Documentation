@@ -32,7 +32,7 @@ In reality, travelers:
 In SUE models:
 
 Each route’s perceived travel time is treated as a random variable.  
-Each traveler’s perceived utility \( U_k \) for route \( k \) is modeled as:
+Each traveler’s perceived utility $U_k $ for route \( $k$ \) is modeled as:
 
 $$
 U_k = V_k + \varepsilon_k
@@ -55,10 +55,10 @@ When perception variance → 0, SUE becomes equivalent to DUE.
 
 Two main SUE formulations arise from different assumptions about \( \varepsilon_k \):
 
-| Model | Distribution of \( \varepsilon_k \) | Choice Probability |
-|--------|-------------------------------------|--------------------|
-| Logit | Gumbel (IID) | \( P_k = \dfrac{e^{V_k / \theta}}{\sum_j e^{V_j / \theta}} \) |
-| Probit | Multivariate normal | \( P_k = Pr(U_k > U_j, \forall j \neq k) \) |
+| Model  | Distribution of \( \varepsilon_k \) | Choice Probability                                           |
+| ------ | ----------------------------------- | ------------------------------------------------------------ |
+| Logit  | Gumbel (IID)                        | $( P_k = \dfrac{e^{V_k / \theta}}{\sum_j e^{V_j / \theta}})$ |
+| Probit | Multivariate normal                 | $( P_k = Pr(U_k > U_j, \forall j \neq k) )$                  |
 
 These assume that perception errors are **unbounded**, which implies that:
 
