@@ -14,7 +14,7 @@ Let:
 - \( \mathcal{F} \): the set of **feasible flow vectors** (flows that satisfy demand conservation)
 - \( c(x) \): the **link (or route) cost vector** as a function of the flow \( x \)
 
-Then the **variational inequality problem** \( \text{VI}(c, \mathcal{F}) \) is to find a flow vector \( x^* \in \mathcal{F} \) such that:
+Then the **variational inequality problem** \( \text{VI}(c, \mathcal{F}) \) is to find a flow vector  $x^*$ in $mathcal{F}$ such that:
 
 $$
 \langle c(x^*), \, x - x^* \rangle \ge 0, \quad \forall x \in \mathcal{F}
@@ -36,7 +36,7 @@ where:
 ##  Interpretation (Traffic Context)
 
 At **equilibrium**, no traveler can improve their travel cost (or perceived utility) by unilaterally changing routes.  
-This means the current flow pattern \( x^* \) satisfies the VI condition — i.e., any feasible deviation \( x - x^* \) cannot *decrease* total travel cost.
+This means the current flow pattern \( x^* \) satisfies the VI condition — i.e., any feasible deviation $x - x^*$ cannot *decrease* total travel cost.
 
 ---
 
@@ -60,7 +60,7 @@ If the cost function \( c(x) \) is **monotone** (i.e., increasing with flow), th
 ## Connection to Stochastic User Equilibrium (SUE)
 
 In **SUE**, travelers perceive route costs **with randomness**.  
-Each route has a **choice probability** \( P_k \) depending on its perceived utility.
+Each route has a **choice probability** $P_k$ depending on its perceived utility.
 
 Even though the choice process is probabilistic, the equilibrium condition can *also* be written as a **variational inequality**:
 
