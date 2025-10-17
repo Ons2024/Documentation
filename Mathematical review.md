@@ -56,6 +56,7 @@ In general, the **travel time** (in case we want the cost of the travel time, we
 $$
 \min \sum_{a \in A} \int_{0}^{x_a} \alpha \, t_a(w) \, dw
 $$
+
 subject to the **flow conservation** and **link–path** relations:
 
 1. **Demand (path-flow) conservation** for every origin–destination (OD) pair $(r,s)$:
@@ -74,6 +75,7 @@ x_a \;=\; \sum_{r,s}\sum_{k\in K_{rs}} \delta_{a k}^{rs}\, f_k^{rs}, \qquad \for
 $$
 
 (where $\delta_{a k}^{rs}=1$ if link $a$ is on path $k$ of OD $(r,s)$, else $0$).
+
 
 **Optional (if relevant):** link capacity constraints
 $$
