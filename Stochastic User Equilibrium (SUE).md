@@ -21,7 +21,7 @@ All used routes have equal (minimum) travel times; unused routes have higher tim
 
 ---
 
-## 2. Introducing Perception: Stochastic User Equilibrium (SUE)
+## 2. Stochastic User Equilibrium (SUE)
 
 In reality, travelers:
 
@@ -40,7 +40,8 @@ $$
 
 where:
 
-- \( V_k \): deterministic (measured) utility (e.g., – travel time)  
+	\( \V_k \): deterministic (measured) utility (e.g., – travel time)  
+	
 - \( \varepsilon_k \): random error term capturing perception differences
 
 A **stochastic equilibrium** is reached when:
