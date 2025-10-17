@@ -1,11 +1,11 @@
-## ⚖️ The Equilibrium Assignment and the Beckmann Problem
+## The Equilibrium Assignment and the Beckmann Problem
 
 The **equilibrium assignment problem** in traffic modeling is **essentially equivalent** to the **Beckmann problem**.  
 Beckmann, McGuire, and Winsten (1956) showed that **Wardrop’s First Principle** (User Equilibrium) can be expressed as a **convex optimization problem**—now known as the *Beckmann formulation*.
 
 ---
 
-### 🧩 Conceptual Link
+### Conceptual Link
 
 - **Wardrop’s User Equilibrium (UE):**
   > No traveler can reduce their travel cost by unilaterally changing routes.
@@ -29,7 +29,7 @@ $$
 
 ---
 
-### 🧠 Convexity of the Beckmann Problem
+### Convexity of the Beckmann Problem
 
 The **Beckmann problem is convex**, which guarantees that:
 
@@ -38,7 +38,7 @@ The **Beckmann problem is convex**, which guarantees that:
 
 ---
 
-#### 🔍 Why It’s Convex
+#### Why It’s Convex
 
 1. **Objective Function Convexity:**
 
@@ -48,10 +48,7 @@ The **Beckmann problem is convex**, which guarantees that:
    t_a(x_a) = t_a^0 \left[ 1 + \alpha \left( \frac{x_a}{c_a} \right)^\beta \right]
    $$
 
-   Because $t_a(x_a)$ is non-decreasing, its integral  
-   $\displaystyle \int_0^{x_a} t_a(w)\,dw$  
-   is **convex** in $x_a$.
-
+   Because $t_a(x_a)$ is non-decreasing, its integral   $\displaystyle \int_0^{x_a} t_a(w)\,dw$  is **convex** in $x_a$.
    Therefore, the total objective:
    $$
    Z(x) = \sum_{a\in A} \int_0^{x_a} t_a(w)\,dw
