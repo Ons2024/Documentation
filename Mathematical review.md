@@ -1,4 +1,4 @@
-# 🧮UE and SO Objective Function
+# UE and SO Objective Function
 
 ## Understanding the Mathematical Formulation
 
@@ -91,7 +91,7 @@ $$
 
 
 
-## 💡 Summary
+##  Summary
 
 | Concept | Objective Function | Interpretation |
 |----------|--------------------|----------------|
