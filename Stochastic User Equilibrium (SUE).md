@@ -32,7 +32,7 @@ In reality, travelers:
 In SUE models:
 
 Each route’s perceived travel time is treated as a random variable.  
-Each traveler’s perceived utility $U_k $ for route \( $k$ \) is modeled as:
+Each traveler’s perceived utility $U_k$ for route \( $k$ \) is modeled as:
 
 $$
 U_k = V_k + \varepsilon_k
