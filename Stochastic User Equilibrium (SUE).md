@@ -40,8 +40,7 @@ $$
 
 where:
 
-	\( \V_k \): deterministic (measured) utility (e.g., – travel time)  
-	
+- ( \V_k\ ): deterministic (measured) utility (e.g., – travel time)  
 - \( \varepsilon_k \): random error term capturing perception differences
 
 A **stochastic equilibrium** is reached when:
