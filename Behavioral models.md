@@ -120,9 +120,9 @@ Thus, instead of everyone deterministically choosing the *minimum-cost route*, c
 
 ---
 
-## 🧠 Behavioral Foundation
+## Behavioral Foundation
 
-The SUE model is built upon **behavioral choice theory**, specifically the **[[Behavioral Models in Transportation]]** and **Multinomial Logit (MNL)** model.
+The SUE model is built upon **behavioral choice theory**, specifically the Behavioral Models in Transportation and **Multinomial Logit (MNL)** model.
 
 Each traveler is assumed to choose the route that **maximizes their perceived utility**, but since utility has a random component, the choice is **stochastic**.
 
@@ -138,7 +138,7 @@ where:
 
 ---
 
-## 🔢 Choice Probability (Multinomial Logit Form)
+##  Choice Probability (Multinomial Logit Form)
 
 If the random terms $\varepsilon_i$ are independently and identically distributed (Gumbel type I), then the **probability** that route *i* is chosen is given by the **Multinomial Logit (MNL)** formula:
 
