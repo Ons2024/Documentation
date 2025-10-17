@@ -50,9 +50,11 @@ A **stochastic equilibrium** is reached when:
 When perception variance → 0, SUE becomes equivalent to DUE.
 
 
-- A **high** UkU_kUk​ means that route _k_ seems more attractive to that traveler.
+### Note that:
+
+- A **high** $U_k$​ means that route $k$ seems more attractive to that traveler.
     
-- A **low** UkU_kUk​ means it seems less attractive.
+- A **low** $Uk$ means it seems less attractive.
     
 
 When we say “traveler chooses the route with the highest utility,” it means:
