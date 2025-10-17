@@ -105,6 +105,135 @@ Behavioral models vary in complexity and realism. Here are some key examples:
 
 ---
 
+# 🎲 Stochastic User Equilibrium (SUE)
+
+## Overview
+
+The **Stochastic User Equilibrium (SUE)** extends the classical User Equilibrium (UE) — Path Flow Formulation by recognizing that **travelers do not perceive travel times and costs perfectly**.
+
+In real networks, drivers:
+- have **imperfect information** (they don’t know all travel times),
+- perceive **uncertainty** (due to congestion, incidents, weather),
+- and exhibit **individual variability** in preferences.
+
+Thus, instead of everyone deterministically choosing the *minimum-cost route*, choices are made **probabilistically**, based on **perceived utility**.
+
+---
+
+## 🧠 Behavioral Foundation
+
+The SUE model is built upon **behavioral choice theory**, specifically the **[[Behavioral Models in Transportation]]** and **Multinomial Logit (MNL)** model.
+
+Each traveler is assumed to choose the route that **maximizes their perceived utility**, but since utility has a random component, the choice is **stochastic**.
+
+The perceived utility of route *i* is:
+
+$$
+U_i = V_i + \varepsilon_i
+$$
+
+where:
+- $V_i$ = deterministic component (usually a function of travel time and cost),
+- $\varepsilon_i$ = random error term representing perception error or unobserved factors.
+
+---
+
+## 🔢 Choice Probability (Multinomial Logit Form)
+
+If the random terms $\varepsilon_i$ are independently and identically distributed (Gumbel type I), then the **probability** that route *i* is chosen is given by the **Multinomial Logit (MNL)** formula:
+
+$$
+P_i = \frac{e^{\theta V_i}}{\sum_{j \in C_r} e^{\theta V_j}}
+$$
+
+where:
+- $\theta$ = dispersion (scale) parameter that captures the **degree of randomness** in perception:
+  - Large $\theta$ → small randomness → approaches deterministic UE.  
+  - Small $\theta$ → large randomness → choices become more random.
+- $C_r$ = set of available routes between origin–destination pair *r*.
+
+---
+
+## ⚙️ Mathematical Formulation of SUE
+
+The **SUE condition** states that, at equilibrium, **no traveler can improve their perceived utility** by changing routes — in expectation.
+
+Let:
+- $x_a$ = flow on link *a*,  
+- $t_a(x_a)$ = travel time on link *a*,  
+- $P_{p}^{r}$ = probability of choosing path *p* for OD pair *r*.
+
+Then the flow on path *p* is:
+
+$$
+f_{p}^{r} = q_r \cdot P_{p}^{r}
+$$
+
+where $q_r$ is the total demand between OD pair *r*.
+
+The equilibrium condition is reached when these perceived costs are consistent with the resulting flows and travel times.
+
+---
+
+## 🧩 Relationship with Deterministic UE
+
+| Feature | Deterministic UE | Stochastic UE |
+|----------|------------------|---------------|
+| Traveler perception | Perfect (all costs known) | Imperfect (random errors) |
+| Route choice | Deterministic — always choose min-cost route | Probabilistic — based on perceived utility |
+| Mathematically | Complementarity or Beckmann problem | Fixed-point or implicit probabilistic equilibrium |
+| Dispersion parameter $\theta$ | $\theta \to \infty$ | Finite |
+| Realism | Simplified | More realistic behavioral representation |
+
+When $\theta \to \infty$, SUE converges to the **classical User Equilibrium (UE)**.  
+When $\theta \to 0$, choices become completely random.
+
+---
+
+## 🧮 Fixed-Point Formulation
+
+The SUE can also be formulated as a **fixed-point problem**:
+
+$$
+x_a = \sum_{r} q_r \sum_{p \in P_r} \delta_{a p} P_p^{r}(x)
+$$
+
+where:
+- $\delta_{a p} = 1$ if link *a* belongs to path *p*, otherwise $0$,
+- $P_p^{r}(x)$ depends on the perceived travel times determined by $x$.
+
+The equilibrium flow vector $x^*$ satisfies:
+
+$$
+x^* = F(x^*)
+$$
+
+which can be solved iteratively (e.g., using **Method of Successive Averages (MSA)**).
+
+---
+
+## 📈 Interpretation
+
+- SUE models **realistic traveler behavior** — accounting for perception errors and heterogeneity.
+- It smooths out unrealistic “all-or-nothing” assignments from deterministic UE.
+- Especially suitable for **large networks** or cases with **imperfect information**.
+
+---
+
+## 🔗 Related Notes
+
+- [[User Equilibrium (UE) — Path Flow Formulation]]  
+- [[Behavioral Models in Transportation]]  
+- [[Beckmann Formulation]]  
+- [[UE and SO Objective Function]]
+
+---
+
+## 📚 References
+
+- Daganzo, C. F., & Sheffi, Y. (1977). *On Stochastic Models of Traffic Assignment*. Transportation Science, 11(3), 253–274.  
+- Sheffi, Y. (1985). *Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods*. Prentice-Hall.  
+- Ben-Akiva, M., & Lerman, S. R. (1985). *Discrete Choice Analysis*. MIT Press.
 
 
 
