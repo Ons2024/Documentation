@@ -27,9 +27,9 @@ $$
 $$
 
 where:
-- $c_a(x^*)$: travel cost on link \( a \) under equilibrium flow \( x^* \)
-- \( \langle \cdot, \cdot \rangle \): inner product
-- \( \mathcal{F} \): feasible set of flows that meet all OD demand constraints
+- $c_a(x^*)$: travel cost on link \( a \) under equilibrium flow $x^* $
+- $langle \cdot, \cdot \rangle$: inner product
+- $mathcal{F}$: feasible set of flows that meet all OD demand constraints
 
 ---
 
