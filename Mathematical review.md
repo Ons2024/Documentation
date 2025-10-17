@@ -1,3 +1,6 @@
+---
+math: true
+---
 # UE and SO Objective Function
 
 ## Wardrop’s Principles (1952)
