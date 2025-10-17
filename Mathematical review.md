@@ -117,7 +117,6 @@ The travel time on each link $a$ can follow:
 
 
 
-
 ### System Optimum (SO)
 
 For **System Optimum**, the objective minimizes the total *system travel time cost* on each link:
