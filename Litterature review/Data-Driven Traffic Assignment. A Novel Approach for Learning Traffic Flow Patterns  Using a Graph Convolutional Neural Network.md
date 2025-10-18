@@ -168,6 +168,8 @@ The model captures **flow propagation** from origins to destinations within the 
 	**Layer 1:** Learns how demand spreads between nodes (network structure).  
 	**Layer 2:** Learns how that demand turns into flows along links.  
 	**Layer 3:** Aggregates all flows per link to get final traffic flow estimates.
+	- The **graph structure (weighted adjacency matrix)** ensures that the model understands how roads are connected.
+	- The **parameters (Θ, Wq, WF)** are learned during training to best map OD demand to observed link flows.
 
 
 
