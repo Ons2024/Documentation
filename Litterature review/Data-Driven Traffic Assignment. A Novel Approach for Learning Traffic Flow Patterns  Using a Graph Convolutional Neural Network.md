@@ -183,15 +183,16 @@ The model captures **flow propagation** from origins to destinations within the 
 	✔️ This second layer learns how **demand from each node turns into flows on adjacent links**, giving $q$ (the distributed link flow matrix).  
 	✔️ Then $q$ is **transposed** ($q^T$) and passed into the **third layer**, which uses $W_F$ and a **linear activation** $f_3$ to produce final **link flows** ($F$).
 
-4. Diffusion Process
+4. **Diffusion Process**
 
 	- Since OD and adjacency matrices **don’t contain path information**, the model uses a **diffusion process** to approximate how flows travel through the network.
 	
 	- This process is modeled as a **random walk** over the network graph, allowing the model to capture multi-hop connections (i.e., how demand moves across several links).
 	
 	- It ensures the GCNN can learn **realistic path-like flow distributions** without explicitly defining paths or user behavior
+	
 	- Uses a **graph convolution filter (g_θ)** derived from the **diffusion process** to model how demand spreads from origins to destinations.
     
-- Learns network properties and flow diffusion patterns.
-    
-- Output: **H₁**, a “convoluted” demand matrix representing how demand diffuses across nodes.
+	- Learns network properties and flow diffusion patterns.
+	
+	- Output: **H₁**, a “convoluted” demand matrix representing how demand diffuses across nodes.
