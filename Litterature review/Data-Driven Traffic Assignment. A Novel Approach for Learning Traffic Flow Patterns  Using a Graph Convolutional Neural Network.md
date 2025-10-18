@@ -165,7 +165,9 @@ The model captures **flow propagation** from origins to destinations within the 
 	
 	![[Pasted image 20251018124333.png]]
 	
-
+	**Layer 1:** Learns how demand spreads between nodes (network structure).  
+	**Layer 2:** Learns how that demand turns into flows along links.  
+	**Layer 3:** Aggregates all flows per link to get final traffic flow estimates.
 
 
 
