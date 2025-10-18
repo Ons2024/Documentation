@@ -16,4 +16,4 @@ This study utilizes network partitioning and subgraph training, explicitly incor
 
 ---
 
-
+The compute the optmization of the UE to use it in the
