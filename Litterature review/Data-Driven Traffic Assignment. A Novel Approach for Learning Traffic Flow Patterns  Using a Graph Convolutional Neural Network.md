@@ -145,6 +145,7 @@ The model captures **flow propagation** from origins to destinations within the 
 ==CNNs treat the network as an image → fail to capture actual **traffic flow relationships** among nodes and links.==
 
 2. **Graph Convolutional Neural Network (GCNN)**
+3. 
     The GCNN replaces the image-based convolution with **graph convolution**
      *Remember*
      - Each node updates its state by **aggregating information from connected nodes**.
@@ -153,17 +154,17 @@ The model captures **flow propagation** from origins to destinations within the 
 	- The **adjacency matrix (Aw)** tells the model **which nodes are connected** and **how strongly** (e.g., distance, travel time, road capacity).
 	- Graph convolution uses this to **control how information flows** through the network — mimicking real traffic propagation.
 
-	---
-	- The GCNN learns **how traffic (flow)** diffuses from **origin nodes to destination nodes** by using **graph convolution**, which considers the network’s **structure** (node positions, connections, and link attributes).
-	    
-	- The model captures **how flows on one link are influenced by adjacent links**, effectively modeling **traffic propagation** within the network.
-	    
-	- Each node and link are embedded with information (features), and the GCNN jointly learns these **features and relationships**.
-	    
-	- Once the GCNN has learned the **flow diffusion patterns**, the learned representations are passed into a **feed-forward neural network** to estimate the **link traffic flows**.
-	
-	![[Pasted image 20251018124333.png]]
-  
+
+- The GCNN learns **how traffic (flow)** diffuses from **origin nodes to destination nodes** by using **graph convolution**, which considers the network’s **structure** (node positions, connections, and link attributes).
+
+- The model captures **how flows on one link are influenced by adjacent links**, effectively modeling **traffic propagation** within the network.
+
+- Each node and link are embedded with information (features), and the GCNN jointly learns these **features and relationships**.
+
+- Once the GCNN has learned the **flow diffusion patterns**, the learned representations are passed into a **feed-forward neural network** to estimate the **link traffic flows**.
+
+![[Pasted image 20251018124333.png]]
+
 
 
 
