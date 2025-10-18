@@ -142,8 +142,8 @@ The model captures **flow propagation** from origins to destinations within the 
 	Roads and intersections are irregularly connected — not arranged in neat rows and columns.  
 	So, a standard CNN can’t properly capture how traffic flows through complex road networks.
 
-
-
 2. **Graph Convolutional Neural Network (GCNN)**
+    the GCNN replaces the image-based convolution with **graph convolution**
+   
 
 
