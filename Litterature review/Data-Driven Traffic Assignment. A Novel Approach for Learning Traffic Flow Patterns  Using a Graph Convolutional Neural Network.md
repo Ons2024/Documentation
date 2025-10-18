@@ -34,8 +34,8 @@ $$
 $$
 Where:
 
-- \( v \): set of **nodes**
-- \( \mathcal{E} \): set of **links** \((i \rightarrow j)\)
+- $v$: set of **nodes**
+- $mathcal{E}$: set of **links** \((i \rightarrow j)\)
 - \( A_w \): **weighted adjacency matrix** based on free-flow travel time
 
 ### Adjacency Weights
