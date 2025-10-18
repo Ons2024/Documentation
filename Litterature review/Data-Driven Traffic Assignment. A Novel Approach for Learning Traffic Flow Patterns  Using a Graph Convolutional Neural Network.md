@@ -236,3 +236,6 @@ The proposed model uses a Graph Convolutional Neural Network (GCNN) to learn how
 ### DATA GENERATION
 
 Because real-world, high-resolution OD and flow data are scarce, the authors generated **synthetic training data** using the **User Equilibrium (UE)** framework solved with the **Frank–Wolfe algorithm**. They used two benchmark transportation networks (Sioux Falls and East Massachusetts) and created 5,000 random OD matrices per traffic condition by scaling the base OD matrix with random factors. For each OD scenario, UE solutions provided the corresponding link flows, serving as ground truth for training and testing. This process allowed them to evaluate how well the proposed GCNN model can learn to approximate equilibrium-like traffic flow distributions under uncongested, moderate, and congested conditions.
+
+> ==We use the UE based traffic assignment mainly to generate the data to verify our approach.==
+
