@@ -22,6 +22,6 @@ The goal is to develop a model that can efficiently learn the mapping between OD
 
 <span style="color:rgb(255, 255, 0)"><span style="color:rgb(0, 176, 80)">When researchers use <b>benchmark test networks</b> like <b>Sioux-Falls</b>, <b>Anaheim</b>, or <b>Eastern Massachusetts</b>, the <b>OD (Origin–Destination) matrix is already provided</b> as part of the dataset.</span></span>
 
+$$ \hat{y} = f(Q, A) $$
 
-
-f(∙) is a GCN-based model in this study that learns the relationship between the input data (OD demand matrix 𝑄, adjacency matrix �
+f(∙) is a GCN-based model in this study that learns the relationship between the input data (OD demand matrix 𝑄, adjacency matrix $A$
