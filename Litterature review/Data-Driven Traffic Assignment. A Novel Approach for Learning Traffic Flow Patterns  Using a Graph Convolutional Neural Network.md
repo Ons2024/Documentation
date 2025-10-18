@@ -154,7 +154,8 @@ The model captures **flow propagation** from origins to destinations within the 
 	- The **adjacency matrix (Aw)** tells the model **which nodes are connected** and **how strongly** (e.g., distance, travel time, road capacity).
 	- Graph convolution uses this to **control how information flows** through the network — mimicking real traffic propagation.
 
-3.  **Modele Architecture** 
+3.  **Modele Architecture**
+
 	- The GCNN learns **how traffic (flow)** diffuses from **origin nodes to destination nodes** by using **graph convolution**, which considers the network’s **structure** (node positions, connections, and link attributes).
 	
 	- The model captures **how flows on one link are influenced by adjacent links**, effectively modeling **traffic propagation** within the network.
@@ -181,3 +182,5 @@ The model captures **flow propagation** from origins to destinations within the 
 	✔️ This second layer learns how **demand from each node turns into flows on adjacent links**, giving $q$ (the distributed link flow matrix).  
 	✔️ Then $q$ is **transposed** ($q^T$) and passed into the **third layer**, which uses $W_F$ and a **linear activation** $f_3$ to produce final **link flows** ($F$).
 	
+
+4. 
