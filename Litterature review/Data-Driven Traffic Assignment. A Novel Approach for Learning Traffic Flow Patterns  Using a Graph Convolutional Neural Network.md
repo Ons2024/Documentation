@@ -44,7 +44,7 @@ where:
 #### Adjacency Weights
 
 It anserws this question : “How long does it take to go from node _i_ to node _j_ when there’s no traffic (free-flow condition)?
-![[Pasted image 20251018115741.png]]
+		![[Pasted image 20251018115741.png]]
 
 - **$t^0$** denotes the free flow travel time between the origin and the destination nodes
 
@@ -161,12 +161,11 @@ The model captures **flow propagation** from origins to destinations within the 
 	- Each node and link are embedded with information (features), and the GCNN jointly learns these **features and relationships**.
 	    
 	- Once the GCNN has learned the **flow diffusion patterns**, the learned representations are passed into a **feed-forward neural network** to estimate the **link traffic flows**.
-
-
-
-
-
+	
+	![[Pasted image 20251018124333.png]]
   
+
+
 
 
 
