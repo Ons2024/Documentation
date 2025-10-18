@@ -41,14 +41,13 @@ where:
 - $\mathcal{E}$: set of **links** $(i \rightarrow j)$
 - $A_w$: **weighted adjacency matrix** based on free-flow travel time
 
-### #Adjacency Weights
+#### Adjacency Weights
 
 - $A_w(i, j)$ represents the **travel time** between nodes $i$ and $j$
 - $A_w(i, j) = 0$ if there is **no direct link** or if $i = j$
 
 ---
-
-### Inputs
+#### Inputs
 
 - **Origin-Destination (OD) demand matrices:**  
   $$
@@ -59,17 +58,14 @@ where:
   - Network topology  
 
 ---
-
-### Outputs
+#### Outputs
 
 - **Corresponding link flow vectors:**  
   $$
   [F_1, F_2, ..., F_m]
   $$
-
 ---
-
-### Objective
+#### Objective
 
 Learn a **mapping function**:
 
