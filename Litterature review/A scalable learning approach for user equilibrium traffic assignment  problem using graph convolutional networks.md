@@ -4,4 +4,8 @@ The paper addresses the **User Equilibrium Traffic Assignment Problem (UE-TAP)**
 
 The authors propose a **Graph Convolutional Network (GCN)-based deep learning framework** to directly learn the mapping between **origin–destination (OD) demands** and **equilibrium traffic flows**, <u><font color="#c00000">bypassing the need for iterative solvers</font></u>
 
+---
+
 <span style="color:rgb(255, 255, 0)">The UE traffic assignment problem (UE-TAP) can be formulated as a convex nonlinear program  and solved by the Frank-Wolfe algorithm</span>
+However, owing to the classical method’s high complexity and limited efficiency, three main streams of solution algorithms have emerged: <span style="color:rgb(0, 176, 80)">link-based algorithms</span> , <span style="color:rgb(0, 176, 80)">bush-based methods</span> , and <span style="color:rgb(0, 176, 80)">path-based algorithms</span>. More recently,<span style="color:rgb(0, 176, 80)"> parallel computing strategies</span> have been explored to enhance both efficiency and scalability in solving UE-TAP
+
