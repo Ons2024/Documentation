@@ -60,7 +60,7 @@ where:
 ---
 #### Outputs
 
-- **Corresponding link flow vectors:**  
+- **Corresponding ==link flow== vectors:**  
   $$
   [F_1, F_2, ..., F_m]
   $$
@@ -73,6 +73,6 @@ $$
 \mathcal{F}([X_1, X_2, ..., X_m]; \mathcal{G}(v, \mathcal{E}, A_w)) = [F_1, F_2, ..., F_m]
 $$
 
-that predicts **link flows** from **OD demands** and **network structure**.
+=> that predicts **link flows** from **OD demands** and **network structure**.
 
 The model captures **flow propagation** from origins to destinations within the network.
