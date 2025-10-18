@@ -206,3 +206,27 @@ The model captures **flow propagation** from origins to destinations within the 
 | **Mathematical Nature** | Uses probability distributions over routes (behavioral interpretation).                            | Uses random walk / Markov chain process (network diffusion interpretation).                                    |
 | **Outcome**             | Flow assignment that satisfies equilibrium (expected perceived costs are equal).                   | Flow propagation pattern that reflects network connectivity and demand influence.                              |
 
+##### **Diffusion Learning in GCNN**
+
+- Multi-step diffusion is **computationally expensive** → instead, they learn the overall diffusion using one parameter matrix **Θ**.  
+- **Θ** acts as a **routing matrix**, showing the probability that flow from node *i* reaches node *j*.  
+- The **diffusion convolution** combines **Θ**, the network structure $(\bar{D}_w^{-1} \bar{A}_w)$, and **OD demand** $(X)$ to learn how demand spreads through the network.
+
+---
+
+##### **Two Versions of the Diffusion Process**
+
+- **Random walk** → Eq. (11):  
+  $$
+  g_\theta * X = \Theta (\bar{D}_w^{-1} \bar{A}_w) X
+  $$
+  
+- **Laplacian** → Eq. (14):  
+  $$
+  g_\theta * X = \Theta (I - \bar{D}_w^{-1} \bar{A}_w) X
+  $$
+
+---
+
+During training, **Θ** is learned to **approximate the stationary (steady-state) flow distribution**,  
+avoiding explicit behavioral models or multiple sequential diffusion steps.
