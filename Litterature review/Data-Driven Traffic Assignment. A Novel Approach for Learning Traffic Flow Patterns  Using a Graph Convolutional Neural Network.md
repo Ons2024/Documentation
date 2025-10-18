@@ -89,51 +89,68 @@ The model captures **flow propagation** from origins to destinations within the 
 1. **Convolutional Neural Networks (CNNs)**
 
     ##### **The main idea**
-    
-	Instead of looking at all the input data at once (like a regular neural network), a CNN looks at **small parts** (or **patches**) of the data using a **filter** (also called a **kernel**).
+
+	Instead of processing all network data simultaneously (like a fully connected neural network), a **Graph Neural Network (GNN)** processes **local substructures** of the network — small groups of connected nodes — to learn how information flows through the system.
 	
-	These filters “slide” across the input and detect patterns such as:
-		- Edges
-		- Shapes
-		- More complex features as the network gets deeper
-		
-	This operation is called **convolution**
-    ### **CNN architecture — step by step**
+	Each node gathers information from its **neighbors** using a **message-passing** or **aggregation** function. Over multiple layers, the model learns how traffic, flow, or demand propagates through the network’s topology.
+	
+	This approach helps the model capture:
+	- Local link dependencies (how one road affects the next)
+	- Network structure (connectivity between intersections)
+	- Global flow patterns after many layers of aggregation
 
-#### **(a) Input Layer**
+---
 
-- Example: an image of size 28×28 pixels (like grayscale handwriting).
-    
+	##### **GNN Architecture — Step by Step**
+	
+	###### **(a) Input Layer**
+	
+	- Nodes represent **intersections**, and edges represent **links (roads)**.  
+	- Each node or edge can have **features**, such as traffic demand, capacity, or travel time.
+	- The network structure is defined by a **graph** $\mathcal{G}(v, \mathcal{E}, A_w)$.
+	
+	---
+	
+	#### **(b) Message Passing / Convolution Layer**
+	
+	- Each node receives information from its **neighboring nodes** via edges.  
+	- The graph convolution operation applies learnable **filters** over connected nodes:  
+	  $$
+	  h_v^{(k+1)} = \text{AGGREGATE}\left( \{ W^{(k)} h_u^{(k)} : u \in \mathcal{N}(v) \} \right)
+	  $$
+	- This aggregation detects local graph patterns, like congestion propagation or route dependencies.
+	
+	---
+	
+	#### **(c) Activation Function**
+	
+	- Typically **ReLU** or another non-linear transformation:
+	  $$
+	  h_v^{(k+1)} = \text{ReLU}(h_v^{(k+1)})
+	  $$
+	- Adds non-linearity to better capture complex network behaviors.
+	
+	---
+	
+	#### **(d) Pooling / Readout Layer**
+	
+	- Summarizes information either per node or across the entire network.  
+	- Reduces complexity while preserving important structural and flow information.
+	
+	---
+	
+	#### **(e) Output Layer**
+	
+	- Produces desired outcomes such as:
+	  - **Predicted link flows** $[F_1, F_2, ..., F_m]$
+	  - **Travel times** or **congestion levels**
+	- The mapping function:
+	  $$
+	  \mathcal{F}([X_1, X_2, ..., X_m]; \mathcal{G}(v, \mathcal{E}, A_w)) = [F_1, F_2, ..., F_m]
+	  $$
+	
+	GNNs generalize the concept of CNNs from grid-based data (like images) to **irregular network data** (like transportation or traffic systems), where roads and intersections are connected in complex, non-Euclidean ways.
 
-#### **(b) Convolution Layer**
-
-- Applies **filters** (like small 3×3 or 5×5 grids).
-    
-- Each filter extracts specific **spatial features** (like edges or corners).
-    
-- Output: a new set of “feature maps” that highlight important parts of the image.
-    
-
-#### **(c) Activation Function**
-
-- Usually **ReLU** (Rectified Linear Unit): keeps positive signals, removes negatives.
-    
-- Adds **non-linearity** — helps model complex relationships.
-    
-
-#### **(d) Pooling Layer**
-
-- Reduces the size of the data (by taking averages or maximum values).
-    
-- Helps the network **focus on the most important features** and speeds up training.
-    
-
-#### **(e) Fully Connected (Dense) Layer**
-
-- Combines all extracted features to make a **final prediction** — e.g.,  
-    “This is a car” 🚗 or “This is a cat” 🐱.
-
-   
 
 
 2. **Graph Convolutional Neural Network (GCNN)**
