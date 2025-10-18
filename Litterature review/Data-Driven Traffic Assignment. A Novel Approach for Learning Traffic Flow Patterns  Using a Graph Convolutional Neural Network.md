@@ -196,6 +196,7 @@ The model captures **flow propagation** from origins to destinations within the 
 	- Learns network properties and flow diffusion patterns.
 	
 	- Output: **H₁**, a “convoluted” demand matrix representing how demand diffuses across nodes.
+	- So expensive for large networks
 	- ==**the diffusion process mimics the _probabilistic spreading of flows_ across paths like in SUE** but it does **not explicitly model traveler behavior or equilibrium conditions**.==
 
 | Aspect                  | Stochastic User Equilibrium (SUE)                                                                  | Diffusion Process in GCNN                                                                                      |
