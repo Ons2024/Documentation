@@ -19,6 +19,6 @@ In this work, they seek to answer the question:
 > ==Can a deep learning model learn the flow patterns of a network without relying on the assumptions of user behavior for assigning traffic in the network?==
 
 
-
+## DATA-DRIVEN TRAFFIC ASSIGNMENT
 
 
