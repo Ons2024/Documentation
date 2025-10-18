@@ -1,5 +1,5 @@
 # Behavioral Models in Transportation
-
+Note that UE and SUE  and SO are user behavior models
 ## What is a Behavioral Model?
 
 A **behavioral model** in transportation describes **how travelers make choices** — such as which **route**, **mode** (car, bus, bike), or **departure time** to use.
@@ -105,5 +105,5 @@ Behavioral models vary in complexity and realism. Here are some key examples:
 
 ---
 
-# Stochastic User Equilibrium (SUE)
+
 
