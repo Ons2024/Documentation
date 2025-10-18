@@ -75,3 +75,11 @@ $$
 => that predicts **link flows** from **OD demands** and **network structure**.
 
 The model captures **flow propagation** from origins to destinations within the network.
+
+
+![[Pasted image 20251018120503.png]]
+
+
+
+
+
