@@ -206,7 +206,7 @@ The model captures **flow propagation** from origins to destinations within the 
 | **Mathematical Nature** | Uses probability distributions over routes (behavioral interpretation).                            | Uses random walk / Markov chain process (network diffusion interpretation).                                    |
 | **Outcome**             | Flow assignment that satisfies equilibrium (expected perceived costs are equal).                   | Flow propagation pattern that reflects network connectivity and demand influence.                              |
 
-##### **Diffusion Learning in GCNN**
+####### **Diffusion Learning in GCNN**
 
 - Multi-step diffusion is **computationally expensive** → instead, they learn the overall diffusion using one parameter matrix **Θ**.  
 - **Θ** acts as a **routing matrix**, showing the probability that flow from node *i* reaches node *j*.  
@@ -214,7 +214,7 @@ The model captures **flow propagation** from origins to destinations within the 
 
 ---
 
-##### **Two Versions of the Diffusion Process**
+####### **Two Versions of the Diffusion Process**
 
 - **Random walk** → Eq. (11):  
   $$
@@ -230,3 +230,5 @@ The model captures **flow propagation** from origins to destinations within the 
 
 During training, **Θ** is learned to **approximate the stationary (steady-state) flow distribution**,  
 avoiding explicit behavioral models or multiple sequential diffusion steps.
+
+### DATA GENERATION
