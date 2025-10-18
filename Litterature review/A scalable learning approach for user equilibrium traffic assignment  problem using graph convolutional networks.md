@@ -10,3 +10,5 @@ The authors propose a **Graph Convolutional Network (GCN)-based deep learning fr
 However, owing to the classical method’s high complexity and limited efficiency, three main streams of solution algorithms have emerged: <span style="color:rgb(0, 176, 80)">link-based algorithms</span> , <span style="color:rgb(0, 176, 80)">bush-based methods</span> , and <span style="color:rgb(0, 176, 80)">path-based algorithms</span>. More recently,<span style="color:rgb(0, 176, 80)"> parallel computing strategies</span> have been explored to enhance both efficiency and scalability in solving UE-TAP
 There is also <span style="color:rgb(0, 176, 80)">data-driven deep learning methods</span> (based on ML and data-driven based)
 
+they develop an end-to-end learning-based framework for user equilibrium prediction under variable network topologies
+
