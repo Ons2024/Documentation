@@ -13,6 +13,9 @@ With the rise of **traffic sensors**, **connected vehicles**, and **big data**, 
 
 To address these gaps, this study introduces a **Graph Convolutional Neural Network (GCNN)** framework that learns **traffic flow patterns** directly from data—without relying on behavioral assumptions. By representing transportation networks as graphs and modeling the **diffusion of origin-destination (OD) demand** through links.
 
+In this work, they seek to answer the question:
+Can a deep learning model learn the flow patterns of a network without relying on the assumptions of user behavior for assigning traffic in the network?
+
 
 
 
