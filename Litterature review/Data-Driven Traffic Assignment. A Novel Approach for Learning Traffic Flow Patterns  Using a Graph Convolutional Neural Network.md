@@ -172,5 +172,17 @@ The model captures **flow propagation** from origins to destinations within the 
 	- The **parameters (Θ, Wq, WF)** are learned during training to best map OD demand to observed link flows.
 
 
+	##### **The main idea: Graph-based Flow Modeling**
+	
+	✔️ They start with the **OD demand matrix** ($X$) and the **adjacency matrix** ($A_w$) that encodes how nodes are connected.  
+	✔️ They apply a **graph convolution filter** ($g_\theta$) to model how demand spreads across connected nodes.  
+	✔️ The parameters **θ** (Theta) are **learnable** — the model adjusts them to best fit observed flow data.  
+	✔️ They use a **nonlinear activation function** $f_1$ (tanh) to capture complex relationships after the convolution.  
+	✔️ The output of that first step ($H_1$) goes into the **second layer**, which uses learnable parameters $W_q$ and another activation $f_2$ (tanh).  
+	✔️ This second layer learns how **demand from each node turns into flows on adjacent links**, giving $q$ (the distributed link flow matrix).  
+	✔️ Then $q$ is **transposed** ($q^T$) and passed into the **third layer**, which uses $W_F$ and a **linear activation** $f_3$ to produce final **link flows** ($F$).
+
+
+
 
 
