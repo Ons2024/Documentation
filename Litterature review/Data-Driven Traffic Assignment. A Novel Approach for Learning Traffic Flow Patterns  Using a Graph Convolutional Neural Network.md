@@ -87,22 +87,17 @@ The model captures **flow propagation** from origins to destinations within the 
 ### Graph Convolution Neural Network for Flow Pattern Learning
 
 1. **Convolutional Neural Networks (CNNs)**
+
     ##### **The main idea**
     
 	Instead of looking at all the input data at once (like a regular neural network), a CNN looks at **small parts** (or **patches**) of the data using a **filter** (also called a **kernel**).
 	
 	These filters “slide” across the input and detect patterns such as:
-		- 
-- Edges
-    
-- Shapes
-    
-- Colors
-    
-- More complex features as the network gets deeper
-    
-
-This operation is called **convolution**
+		- Edges
+		- Shapes
+		- More complex features as the network gets deeper
+		
+	This operation is called **convolution**
 
    
 
