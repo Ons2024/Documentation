@@ -98,6 +98,40 @@ The model captures **flow propagation** from origins to destinations within the 
 		- More complex features as the network gets deeper
 		
 	This operation is called **convolution**
+    ### **CNN architecture — step by step**
+
+#### **(a) Input Layer**
+
+- Example: an image of size 28×28 pixels (like grayscale handwriting).
+    
+
+#### **(b) Convolution Layer**
+
+- Applies **filters** (like small 3×3 or 5×5 grids).
+    
+- Each filter extracts specific **spatial features** (like edges or corners).
+    
+- Output: a new set of “feature maps” that highlight important parts of the image.
+    
+
+#### **(c) Activation Function**
+
+- Usually **ReLU** (Rectified Linear Unit): keeps positive signals, removes negatives.
+    
+- Adds **non-linearity** — helps model complex relationships.
+    
+
+#### **(d) Pooling Layer**
+
+- Reduces the size of the data (by taking averages or maximum values).
+    
+- Helps the network **focus on the most important features** and speeds up training.
+    
+
+#### **(e) Fully Connected (Dense) Layer**
+
+- Combines all extracted features to make a **final prediction** — e.g.,  
+    “This is a car” 🚗 or “This is a cat” 🐱.
 
    
 
