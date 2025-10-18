@@ -12,3 +12,4 @@ There is also <span style="color:rgb(0, 176, 80)">data-driven deep learning meth
 
 they develop an end-to-end learning-based framework for user equilibrium prediction under variable network topologies
 
+This study utilizes network partitioning and subgraph training, explicitly incorporating network attributes such as free-flow travel time and link capacity, and employing a variable adjacency matrix as input, thereby making the model adapt dynamically to varying network topologies and significantly improving model robustness.
