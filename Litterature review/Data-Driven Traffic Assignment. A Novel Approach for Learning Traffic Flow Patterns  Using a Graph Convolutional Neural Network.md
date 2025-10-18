@@ -52,9 +52,6 @@ where:
   $$
   [X_1, X_2, ..., X_m]
   $$
-- **Network characteristics**, including:  
-  - Link travel times  
-  - Network topology  
 
 ---
 #### Outputs
