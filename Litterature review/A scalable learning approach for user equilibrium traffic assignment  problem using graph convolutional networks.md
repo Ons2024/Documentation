@@ -47,4 +47,4 @@ f(∙) is a GCN-based model in this study that learns the relationship between t
 	
 
 2. GCN for variable network topologies
-we introduce traffic network partitioning
+we introduce traffic network partitioning enabling our approach to be adaptable and transferable across different traffic networks.
