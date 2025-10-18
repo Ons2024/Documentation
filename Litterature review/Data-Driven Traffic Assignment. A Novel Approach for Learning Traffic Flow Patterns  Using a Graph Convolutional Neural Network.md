@@ -181,6 +181,4 @@ The model captures **flow propagation** from origins to destinations within the 
 	✔️ The output of that first step ($H_1$) goes into the **second layer**, which uses learnable parameters $W_q$ and another activation $f_2$ (tanh).  
 	✔️ This second layer learns how **demand from each node turns into flows on adjacent links**, giving $q$ (the distributed link flow matrix).  
 	✔️ Then $q$ is **transposed** ($q^T$) and passed into the **third layer**, which uses $W_F$ and a **linear activation** $f_3$ to produce final **link flows** ($F$).
-	
-
-4. 
+	4.Diffusion Process 
