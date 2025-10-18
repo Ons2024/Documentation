@@ -84,6 +84,33 @@ This model generalizes to new or partially altered networks and even supports **
 
 
 
+Experiments on **Sioux-Falls** and **Eastern Massachusetts** networks showed:
+
+- High accuracy under fixed topology (R² ≈ 0.90).
+    
+- Strong robustness under variable conditions (R² ≈ 0.84 with random link failures).
+    
+- Using **fewer subgraphs (e.g., 2 instead of 4)** preserves more global information and yields better performance.
+    
+
+The method demonstrates substantial **speed and scalability advantages** over traditional algorithms.
+
+
+### **Limitations and Future Work**
+
+- The model was tested mainly on **synthetic networks**; real-world applications face **data heterogeneity and incompleteness**.
+    
+- Current partitioning does **not allow communication between subgraphs**, leading to information loss.
+    
+- Future research will focus on:
+    
+    - **Inter-subgraph information exchange**,
+        
+    - **Better adaptation to real-world network data**, and
+        
+    - **Comprehensive efficiency analysis** (training cost, scalability, inference speed).
+
+
 
 
 
