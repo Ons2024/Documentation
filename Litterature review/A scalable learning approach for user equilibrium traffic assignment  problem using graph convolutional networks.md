@@ -24,4 +24,8 @@ The goal is to develop a model that can efficiently learn the mapping between OD
 
 $$ \hat{y} = f(Q, A) $$
 
-f(∙) is a GCN-based model in this study that learns the relationship between the input data (OD demand matrix 𝑄, adjacency matrix $A$
+f(∙) is a GCN-based model in this study that learns the relationship between the input data (OD demand matrix 𝑄, adjacency matrix $A$ where each element of 𝐴 equals 1 when the two nodes in the road network are adjacent; it is 0 otherwise.
+
+
+---
+
