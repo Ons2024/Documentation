@@ -19,3 +19,5 @@ This study utilizes network partitioning and subgraph training, explicitly incor
 The compute the optmization of the UE to use it in their model as ground truth cause real world data is hard to get.
 
 The goal is to develop a model that can efficiently learn the mapping between OD demand and equilibrium traffic flows in the network, thereby reducing computational time while maintaining high accuracy
+
+<span style="color:rgb(255, 255, 0)"><span style="color:rgb(0, 176, 80)">When researchers use <b>benchmark test networks</b> like <b>Sioux-Falls</b>, <b>Anaheim</b>, or <b>Eastern Massachusetts</b>, the <b>OD (Origin–Destination) matrix is already provided</b> as part of the dataset.</span></span>
