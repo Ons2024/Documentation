@@ -98,9 +98,8 @@ The model captures **flow propagation** from origins to destinations within the 
 	- Local link dependencies (how one road affects the next)
 	- Network structure (connectivity between intersections)
 	- Global flow patterns after many layers of aggregation
-
----
-
+	
+	
 	##### **GNN Architecture — Step by Step**
 	
 	###### **(a) Input Layer**
@@ -109,9 +108,8 @@ The model captures **flow propagation** from origins to destinations within the 
 	- Each node or edge can have **features**, such as traffic demand, capacity, or travel time.
 	- The network structure is defined by a **graph** $\mathcal{G}(v, \mathcal{E}, A_w)$.
 	
-	---
 	
-	#### **(b) Message Passing / Convolution Layer**
+	###### **(b) Message Passing / Convolution Layer**
 	
 	- Each node receives information from its **neighboring nodes** via edges.  
 	- The graph convolution operation applies learnable **filters** over connected nodes:  
@@ -120,9 +118,8 @@ The model captures **flow propagation** from origins to destinations within the 
 	  $$
 	- This aggregation detects local graph patterns, like congestion propagation or route dependencies.
 	
-	---
 	
-	#### **(c) Activation Function**
+	###### **(c) Activation Function**
 	
 	- Typically **ReLU** or another non-linear transformation:
 	  $$
@@ -130,16 +127,14 @@ The model captures **flow propagation** from origins to destinations within the 
 	  $$
 	- Adds non-linearity to better capture complex network behaviors.
 	
-	---
 	
-	#### **(d) Pooling / Readout Layer**
+	###### **(d) Pooling / Readout Layer**
 	
 	- Summarizes information either per node or across the entire network.  
 	- Reduces complexity while preserving important structural and flow information.
 	
-	---
 	
-	#### **(e) Output Layer**
+	###### **(e) Output Layer**
 	
 	- Produces desired outcomes such as:
 	  - **Predicted link flows** $[F_1, F_2, ..., F_m]$
@@ -154,3 +149,5 @@ The model captures **flow propagation** from origins to destinations within the 
 
 
 2. **Graph Convolutional Neural Network (GCNN)**
+
+
