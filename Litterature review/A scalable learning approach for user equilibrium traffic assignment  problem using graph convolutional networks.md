@@ -16,4 +16,6 @@ This study utilizes network partitioning and subgraph training, explicitly incor
 
 ---
 
-The compute the optmization of the UE to use it in their model as ground truth cause real world data is hard to get 
+The compute the optmization of the UE to use it in their model as ground truth cause real world data is hard to get.
+
+The goal is to develop a model that can efficiently learn the mapping between OD demand and equilibrium traffic flows in the network, thereby reducing computational time while maintaining high accuracy
