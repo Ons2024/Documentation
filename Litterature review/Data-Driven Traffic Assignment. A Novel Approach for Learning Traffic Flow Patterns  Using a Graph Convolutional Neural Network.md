@@ -137,7 +137,7 @@ The model captures **flow propagation** from origins to destinations within the 
 	“This is a car” 🚗 or “This is a cat” 🐱.
 	
 	---
-	
+	 **Limitation**
 	CNNs work great on grids (like images) but not on networks (graphs), because:  
 	Roads and intersections are irregularly connected — not arranged in neat rows and columns.  
 	So, a standard CNN can’t properly capture how traffic flows through complex road networks.
