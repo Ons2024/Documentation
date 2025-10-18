@@ -196,4 +196,12 @@ The model captures **flow propagation** from origins to destinations within the 
 	- Learns network properties and flow diffusion patterns.
 	
 	- Output: **H₁**, a “convoluted” demand matrix representing how demand diffuses across nodes.
-	- **the diffusion process mimics the _probabilistic spreading of flows_ across paths like in SUE** but it does **not explicitly model traveler behavior or equilibrium conditions**.
+	- ==**the diffusion process mimics the _probabilistic spreading of flows_ across paths like in SUE** but it does **not explicitly model traveler behavior or equilibrium conditions**.==
+
+| Aspect                  | Stochastic User Equilibrium (SUE)                                                                  | Diffusion Process in GCNN                                                                                      |
+| ----------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Goal**                | Model how travelers choose paths under uncertainty (travel times, perception errors).              | Model how flow diffuses probabilistically from origins to destinations through the network.                    |
+| **Mechanism**           | Each traveler chooses a route with a probability (e.g., Logit model) depending on perceived costs. | Flow spreads according to transition probabilities (random walks) based on network structure and link weights. |
+| **Mathematical Nature** | Uses probability distributions over routes (behavioral interpretation).                            | Uses random walk / Markov chain process (network diffusion interpretation).                                    |
+| **Outcome**             | Flow assignment that satisfies equilibrium (expected perceived costs are equal).                   | Flow propagation pattern that reflects network connectivity and demand influence.                              |
+
