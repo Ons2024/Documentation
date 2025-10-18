@@ -29,3 +29,12 @@ f(∙) is a GCN-based model in this study that learns the relationship between t
 
 ---
 
+1. in case of a fixed network 
+	The model starts with three main components:
+
+	- **OD demand information** — tells how many trips go from each origin to each destination.
+	    
+	- **Adjacency matrix (A)** — tells which nodes are connected (the graph structure of the road network).
+	    
+	- **Edge attributes** — physical link properties (capacity, free-flow time, etc.).
+
