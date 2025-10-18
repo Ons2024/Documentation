@@ -251,3 +251,5 @@ hey compared **three diffusion methods**:
     
 
 Across **two networks** (Sioux Falls and East Massachusetts) and **three traffic conditions** (uncongested, moderate, congested).
+
+the model achieved near-perfect accuracy (R² ≈ 1) with minimal RMSE and MAE. Both diffusion-based (random walk and Laplacian) and spectral graph convolutions performed similarly, confirming that the network effectively captures flow diffusion dynamics without explicit behavioral modeling.
