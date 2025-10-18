@@ -22,6 +22,8 @@ Wardrop proposed two fundamental principles to describe traffic assignment behav
 
 
 <span style="color:rgb(255, 255, 0)">   The UE traffic assignment problem (UE-TAP) can be formulated as a convex nonlinear program  and solved by the Frank-Wolfe algorithm</span>
+
+However, owing to the classical method’s high complexity and limited efficiency, three main streams of solution algorithms have emerged: link-based algorithms , bush-based methods , and path-based algorithms . More recently, parallel computing strategies have been explored to enhance both efficiency and scalability in solving UE-TAP
    
 2. **Second Principle – System Optimum (SO):**  
    Travelers act **cooperatively** to minimize the **total system cost** (the sum of all users’ travel times or costs).  
