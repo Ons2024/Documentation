@@ -43,6 +43,7 @@ where:
 
 #### Adjacency Weights
 ![[Pasted image 20251018115741.png]]
+
 - **$t^0$** denotes the free flow travel time between the origin and the destination nodes
 
 ---
