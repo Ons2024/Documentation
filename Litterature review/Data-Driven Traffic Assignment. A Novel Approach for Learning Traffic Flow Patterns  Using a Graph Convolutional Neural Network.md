@@ -146,10 +146,11 @@ CNNs treat the network as an image → fail to capture actual **traffic flow rel
 
 2. **Graph Convolutional Neural Network (GCNN)**
     The GCNN replaces the image-based convolution with **graph convolution**
-      - Each node updates its state by **aggregating information from connected nodes**.
-- This is often called **“message passing.”**
-    
-- Over several layers, each node learns not just its own features, but also what’s happening nearby.
+     - Each node updates its state by **aggregating information from connected nodes**.
+	- This is often called **“message passing.”**
+	- Over several layers, each node learns not just its own features, but also what’s happening nearby.
+	- -The **adjacency matrix (A₍w₎)** tells the model **which nodes are connected** and **how strongly** (e.g., distance, travel time, road capacity).
+	- Graph convolution uses this to **control how information flows** through the network — mimicking real traffic propagation.
    
 
 
