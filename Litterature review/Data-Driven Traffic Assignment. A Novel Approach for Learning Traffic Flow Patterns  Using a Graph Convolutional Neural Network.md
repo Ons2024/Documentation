@@ -253,3 +253,6 @@ hey compared **three diffusion methods**:
 Across **two networks** (Sioux Falls and East Massachusetts) and **three traffic conditions** (uncongested, moderate, congested).
 
 the model achieved near-perfect accuracy (R² ≈ 1) with minimal RMSE and MAE. Both diffusion-based (random walk and Laplacian) and spectral graph convolutions performed similarly, confirming that the network effectively captures flow diffusion dynamics without explicit behavioral modeling.
+
+The GCNN learned realistic flow propagation patterns — the learned parameters Wq​ align with betweenness centrality, confirming that the model internally captured the physical meaning of flow diffusion in the network.  
+However, under **heavy congestion**, the relationship weakens because path choices become unstable and less predictable.
