@@ -105,6 +105,59 @@ The model captures **flow propagation** from origins to destinations within the 
 	
 	- Nodes represent **intersections**, and edges represent **links (roads)**.  
 	-
+##### **The main idea**
+    
+Instead of looking at all the input data at once (like a regular neural network), a CNN looks at **small parts** (or **patches**) of the data using a **filter** (also called a **kernel**).
+	
+These filters “slide” across the input and detect patterns such as:
+- Edges
+- Shapes
+- More complex features as the network gets deeper
+		
+This operation is called **convolution**
+
+---
+
+### **CNN architecture — step by step**
+
+#### **(a) Input Layer**
+
+- Example: an image of size 28×28 pixels (like grayscale handwriting).
+    
+
+#### **(b) Convolution Layer**
+
+- Applies **filters** (like small 3×3 or 5×5 grids).
+    
+- Each filter extracts specific **spatial features** (like edges or corners).
+    
+- Output: a new set of “feature maps” that highlight important parts of the image.
+    
+
+#### **(c) Activation Function**
+
+- Usually **ReLU** (Rectified Linear Unit): keeps positive signals, removes negatives.
+    
+- Adds **non-linearity** — helps model complex relationships.
+    
+
+#### **(d) Pooling Layer**
+
+- Reduces the size of the data (by taking averages or maximum values).
+    
+- Helps the network **focus on the most important features** and speeds up training.
+    
+
+#### **(e) Fully Connected (Dense) Layer**
+
+- Combines all extracted features to make a **final prediction** — e.g.,  
+“This is a car” 🚗 or “This is a cat” 🐱.
+
+---
+
+CNNs work great on grids (like images) but not on networks (graphs), because:  
+Roads and intersections are irregularly connected — not arranged in neat rows and columns.  
+So, a standard CNN can’t properly capture how traffic flows through complex road networks.
 
 
 
