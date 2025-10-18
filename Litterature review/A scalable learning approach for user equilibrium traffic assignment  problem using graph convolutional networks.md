@@ -21,3 +21,7 @@ The compute the optmization of the UE to use it in their model as ground truth c
 The goal is to develop a model that can efficiently learn the mapping between OD demand and equilibrium traffic flows in the network, thereby reducing computational time while maintaining high accuracy
 
 <span style="color:rgb(255, 255, 0)"><span style="color:rgb(0, 176, 80)">When researchers use <b>benchmark test networks</b> like <b>Sioux-Falls</b>, <b>Anaheim</b>, or <b>Eastern Massachusetts</b>, the <b>OD (Origin–Destination) matrix is already provided</b> as part of the dataset.</span></span>
+
+
+
+f(∙) is a GCN-based model in this study that learns the relationship between the input data (OD demand matrix 𝑄, adjacency matrix �
