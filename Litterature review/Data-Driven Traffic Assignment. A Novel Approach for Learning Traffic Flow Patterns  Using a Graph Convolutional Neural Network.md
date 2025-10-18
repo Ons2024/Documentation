@@ -98,53 +98,13 @@ The model captures **flow propagation** from origins to destinations within the 
 	- Local link dependencies (how one road affects the next)
 	- Network structure (connectivity between intersections)
 	- Global flow patterns after many layers of aggregation
-	
-	
+	- 
 	##### **GNN Architecture — Step by Step**
 	
 	###### **(a) Input Layer**
 	
 	- Nodes represent **intersections**, and edges represent **links (roads)**.  
-	- Each node or edge can have **features**, such as traffic demand, capacity, or travel time.
-	- The network structure is defined by a **graph** $\mathcal{G}(v, \mathcal{E}, A_w)$.
-	
-	
-	###### **(b) Message Passing / Convolution Layer**
-	
-	- Each node receives information from its **neighboring nodes** via edges.  
-	- The graph convolution operation applies learnable **filters** over connected nodes:  
-	  $$
-	  h_v^{(k+1)} = \text{AGGREGATE}\left( \{ W^{(k)} h_u^{(k)} : u \in \mathcal{N}(v) \} \right)
-	  $$
-	- This aggregation detects local graph patterns, like congestion propagation or route dependencies.
-	
-	
-	###### **(c) Activation Function**
-	
-	- Typically **ReLU** or another non-linear transformation:
-	  $$
-	  h_v^{(k+1)} = \text{ReLU}(h_v^{(k+1)})
-	  $$
-	- Adds non-linearity to better capture complex network behaviors.
-	
-	
-	###### **(d) Pooling / Readout Layer**
-	
-	- Summarizes information either per node or across the entire network.  
-	- Reduces complexity while preserving important structural and flow information.
-	
-	
-	###### **(e) Output Layer**
-	
-	- Produces desired outcomes such as:
-	  - **Predicted link flows** $[F_1, F_2, ..., F_m]$
-	  - **Travel times** or **congestion levels**
-	- The mapping function:
-	  $$
-	  \mathcal{F}([X_1, X_2, ..., X_m]; \mathcal{G}(v, \mathcal{E}, A_w)) = [F_1, F_2, ..., F_m]
-	  $$
-	
-	GNNs generalize the concept of CNNs from grid-based data (like images) to **irregular network data** (like transportation or traffic systems), where roads and intersections are connected in complex, non-Euclidean ways.
+	-
 
 
 
