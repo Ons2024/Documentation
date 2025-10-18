@@ -161,6 +161,12 @@ The model captures **flow propagation** from origins to destinations within the 
 	- Each node and link are embedded with information (features), and the GCNN jointly learns these **features and relationships**.
 	    
 	- Once the GCNN has learned the **flow diffusion patterns**, the learned representations are passed into a **feed-forward neural network** to estimate the **link traffic flows**.
-	   
+
+
+
+
+
+  
+
 
 
