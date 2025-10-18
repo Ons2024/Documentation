@@ -156,6 +156,7 @@ The model captures **flow propagation** from origins to destinations within the 
 
 3.  **Modele Architecture**
 
+
 	- The GCNN learns **how traffic (flow)** diffuses from **origin nodes to destination nodes** by using **graph convolution**, which considers the network’s **structure** (node positions, connections, and link attributes).
 	
 	- The model captures **how flows on one link are influenced by adjacent links**, effectively modeling **traffic propagation** within the network.
@@ -181,4 +182,6 @@ The model captures **flow propagation** from origins to destinations within the 
 	✔️ The output of that first step ($H_1$) goes into the **second layer**, which uses learnable parameters $W_q$ and another activation $f_2$ (tanh).  
 	✔️ This second layer learns how **demand from each node turns into flows on adjacent links**, giving $q$ (the distributed link flow matrix).  
 	✔️ Then $q$ is **transposed** ($q^T$) and passed into the **third layer**, which uses $W_F$ and a **linear activation** $f_3$ to produce final **link flows** ($F$).
-	4.Diffusion Process 
+
+4. Diffusion Process
+
