@@ -1,5 +1,5 @@
 
-
+Rahman and Hasan (this paper) employed the graph convolutional network (GCN) to address stochastic flow diffusion under traffic randomness.
 ## Core Idea
 
 This study introduces a **data-driven approach** to learn **traffic flow patterns** in transportation networks directly from data, ==without assuming user behavior models like user equilibrium or system optimal==.
