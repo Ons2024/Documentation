@@ -47,4 +47,6 @@ f(∙) is a GCN-based model in this study that learns the relationship between t
 	
 
 2. GCN for variable network topologies
-we introduce traffic network partitioning enabling our approach to be adaptable and transferable across different traffic networks.
+	we introduce traffic network partitioning enabling our approach to be adaptable and transferable across different traffic networks.
+	
+	In the variable-topology model, the road network is first represented as a **dual graph**, where each road segment becomes a node and connections between consecutive roads form the edges. This allows the model to directly capture relationships between roads rather than intersections. To handle network variability, the network is then partitioned into subnetworks with equal numbers of edges, using zero-padding where necessary to maintain consistent input size. Because traffic demand is originally defined at the origin–destination (OD) level, an **all-or-nothing assignment** is used to project this demand onto the road segments: for each OD pair, all trips are assigned to the shortest free-flow path, and link flows are aggregated across all OD pairs. These flows, combined with road attributes such as capacity and free-flow time, form the **edge-level feature vectors**. Finally, a graph convolutional network (GCN) with an edge-based adjacency matrix processes these features to learn spatial dependencies among connected roads and predict the equilibrium traffic flow under variable network topologies.
