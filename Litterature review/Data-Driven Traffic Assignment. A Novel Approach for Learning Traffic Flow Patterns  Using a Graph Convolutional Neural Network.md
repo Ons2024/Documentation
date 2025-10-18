@@ -168,6 +168,8 @@ The model captures **flow propagation** from origins to destinations within the 
 	**Layer 1:** Learns how demand spreads between nodes (network structure).  
 	**Layer 2:** Learns how that demand turns into flows along links.  
 	**Layer 3:** Aggregates all flows per link to get final traffic flow estimates.
+	 - **Θ**, **Wq**, and **WF** are all **trainable weights**,  
+	- while the **graph convolution filter structure gθg_θgθ​** and the **adjacency matrix (Aw)** come from the **network topology** (they are fixed, not learned).
 	
 	####### **The main idea: Graph-based Flow Modeling**
 	
