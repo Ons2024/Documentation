@@ -22,3 +22,8 @@ In this work, they seek to answer the question:
 ## DATA-DRIVEN TRAFFIC ASSIGNMENT
 
 
+
+
+- **Transportation network** is represented as a **weighted directed graph**.
+- Each link between nodes carries information such as **distance, speed limit, capacity,** and **free-flow travel time**.
+- 
