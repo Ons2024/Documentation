@@ -26,4 +26,5 @@ In this work, they seek to answer the question:
 
 - **Transportation network** is represented as a **weighted directed graph**.
 - Each link between nodes carries information such as **distance, speed limit, capacity,** and **free-flow travel time**.
+- The goal is to learn a **mapping function** that relates **origin-destination (OD) travel demands** to **link flows** in the network using available data and network characteristics (e.g., node locations, travel times).
 - 
