@@ -241,3 +241,13 @@ Because real-world, high-resolution OD and flow data are scarce, the authors gen
 
 
 ### RESULTS AND DISCUSSION
+hey compared **three diffusion methods**:
+
+1. **Random Walk** (Diffusion convolution using transition matrix)
+    
+2. **Laplacian Graph** (Diffusion convolution using normalized Laplacian)
+    
+3. **Spectral Graph** (Spectral GCN — eigen-decomposition of adjacency matrix)
+    
+
+Across **two networks** (Sioux Falls and East Massachusetts) and **three traffic conditions** (uncongested, moderate, congested).
