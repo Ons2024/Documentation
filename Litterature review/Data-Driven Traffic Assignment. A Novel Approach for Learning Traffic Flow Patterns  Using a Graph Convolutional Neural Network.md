@@ -42,7 +42,7 @@ where:
 - $A_w$: **weighted adjacency matrix** based on free-flow travel time
 
 #### Adjacency Weights
-
+![[Pasted image 20251018115741.png]]
 - $A_w(i, j)$ represents the **travel time** between nodes $i$ and $j$
 - $A_w(i, j) = 0$ if there is **no direct link** or if $i = j$
 
