@@ -69,6 +69,21 @@ For networks with a fixed topology:
 
 This model achieves high prediction accuracy for static networks, demonstrating that deep learning can effectively approximate UE solutions.
 
+To handle **networks with changing topologies** (e.g., link failures or new roads), the authors propose:
+
+- **Traffic Network Partitioning:** The network is divided into **subgraphs** (subnetworks) with equal numbers of edges for standardized input size.
+    
+- **Dual Graph Representation:** Each **road segment becomes a node**, and adjacency is defined between connected road segments (edge-level connectivity).
+    
+- **All-or-Nothing Assignment:** OD demand is projected onto links by assigning all trips to their **shortest paths**, creating initial link-level demand features.
+    
+- These features (capacity, free-flow time, and projected demand) are then embedded and processed by a **GCN using the segment adjacency matrix**.
+    
+
+This model generalizes to new or partially altered networks and even supports **transfer learning** — a pretrained model can be fine-tuned on another network with limited data.
+
+
+
 
 
 
