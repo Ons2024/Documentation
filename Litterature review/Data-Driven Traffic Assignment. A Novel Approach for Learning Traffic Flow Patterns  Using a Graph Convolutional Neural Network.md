@@ -27,21 +27,24 @@ In this work, they seek to answer the question:
 - The goal is to learn a **mapping function** that relates **origin-destination (OD) travel demands** to **link flows** in the network using available data and network characteristics (e.g., node locations, travel times).
 
 
+### Transportation Network Model
+
 The transportation network is modeled as a **weighted directed graph**:
 
 $$
 \mathcal{G}(v, \mathcal{E}, A_w)
 $$
-Where:
+
+where:
 
 - $v$: set of **nodes**
-- $mathcal{E}$: set of **links** \((i \rightarrow j)\)
-- \( A_w \): **weighted adjacency matrix** based on free-flow travel time
+- $\mathcal{E}$: set of **links** $(i \rightarrow j)$
+- $A_w$: **weighted adjacency matrix** based on free-flow travel time
 
-### Adjacency Weights
+### #Adjacency Weights
 
-- \( A_w(i, j) \) represents the **travel time** between nodes \( i \) and \( j \)
-- \( A_w(i, j) = 0 \) if there is **no direct link** or if \( i = j \)
+- $A_w(i, j)$ represents the **travel time** between nodes $i$ and $j$
+- $A_w(i, j) = 0$ if there is **no direct link** or if $i = j$
 
 ---
 
