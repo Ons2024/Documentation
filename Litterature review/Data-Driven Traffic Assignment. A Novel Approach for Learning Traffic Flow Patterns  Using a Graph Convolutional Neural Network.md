@@ -85,6 +85,7 @@ The model captures **flow propagation** from origins to destinations within the 
 
 
 ### Graph Convolution Neural Network for Flow Pattern Learning
+==CNNs treat the network as an image → fail to capture actual **traffic flow relationships** among nodes and links.==
 
 1. **Convolutional Neural Networks (CNNs)**
 
@@ -142,7 +143,7 @@ The model captures **flow propagation** from origins to destinations within the 
 	Roads and intersections are irregularly connected — not arranged in neat rows and columns.  
 	So, a standard CNN can’t properly capture how traffic flows through complex road networks.
 
-==CNNs treat the network as an image → fail to capture actual **traffic flow relationships** among nodes and links.==
+	
 
 2. **Graph Convolutional Neural Network (GCNN)**
 
