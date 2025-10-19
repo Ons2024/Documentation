@@ -78,7 +78,7 @@ $$
 The model captures **flow propagation** from origins to destinations within the network.
 
 
-![[Pasted image 20251018120503.png]]
+![[images/Pasted image 20251018120503.png]]
 
 
 
