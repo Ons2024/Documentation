@@ -1,4 +1,6 @@
 # UE and SO Objective Function
+
+
 ## Wardrop’s Principles (1952)
 Solving UE is literally an optimization problem
 
