@@ -166,7 +166,7 @@ The model captures **flow propagation** from origins to destinations within the 
 	
 	- Once the GCNN has learned the **flow diffusion patterns**, the learned representations are passed into a **feed-forward neural network** to estimate the **link traffic flows**.
 	
-	![[Pasted image 20251018124333.png]]
+	![[images/Pasted image 20251018124333.png]]
 	
 	**Layer 1:** Learns how demand spreads between nodes (network structure).  
 	**Layer 2:** Learns how that demand turns into flows along links.  
