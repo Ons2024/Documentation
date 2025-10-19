@@ -45,7 +45,7 @@ where:
 #### Adjacency Weights
 
 It anserws this question : “How long does it take to go from node _i_ to node _j_ when there’s no traffic (free-flow condition)?
-		![[Pasted image 20251018115741.png]]
+		![[images/Pasted image 20251018115741.png]]
 
 - **$t^0$** denotes the free flow travel time between the origin and the destination nodes
 

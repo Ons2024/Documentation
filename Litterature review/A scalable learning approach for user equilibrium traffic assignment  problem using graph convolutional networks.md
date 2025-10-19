@@ -38,7 +38,7 @@ f(∙) is a GCN-based model in this study that learns the relationship between t
 	    
 	- **Edge attributes** — physical link properties (capacity, free-flow time, etc.).
 
-	![[Pasted image 20251018184811.png]]
+	![[images/Pasted image 20251018184811.png]]
 	- GCN → learns spatial dependencies between nodes (node embeddings).
 	    
 	- Node embeddings + link attributes → form edge embeddings.
