@@ -24,3 +24,7 @@ The model introduces several key innovations:
     
 3. Enhanced **generalization to unseen networks** through the combination of virtual links and conservation-based regularization
 
+# literature
+
+##
+
