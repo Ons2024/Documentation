@@ -53,5 +53,12 @@ To address this challenge, GNNs are specifically designed to handle graph-struct
 ## GCN 
 
 
+- **Before**: Node features are “local” — they only describe each node itself.
+    
+- **After**: Node features are “network-aware” — they encode information about the node’s position, its neighbors, and the overall graph patterns.
+    
+- In other words: yes, we go from **N raw features → M learned features** that **capture graph connectivity and patterns**, which helps tasks like traffic assignment, where flows depend on the network structure.
+
+
 
 
