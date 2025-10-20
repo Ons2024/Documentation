@@ -132,3 +132,9 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
     - These are synthetic edges between node pairs (u,v).
         
     - They do **not** have predefined edge features, so the model learns them adaptively.
+---
+- V-Encoder runs NN stacked layers of attention-based embedding updates over virtual links.
+    
+- The output Hn0Hn0 is an enriched node feature matrix capturing demand-based structural information.
+    
+- This output feeds into the R-Encoder to integrate real road link effects for final traffic flow and capacity prediction.
