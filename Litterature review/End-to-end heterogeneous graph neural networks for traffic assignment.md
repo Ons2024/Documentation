@@ -51,13 +51,51 @@ Recent advances in **neural networks** offer promising alternatives, as they exc
 To address this challenge, GNNs are specifically designed to handle graph-structured data. It operates on the node features and edge features and learns to extract embedding from nodes and edges, aiming to capture the underlying graph structure
 
 ## GCN 
-**Graph Neural Networks (GNNs)** are designed to handle **non-Euclidean, graph-structured data**, which cannot be effectively modeled by conventional neural networks that assume fixed, grid-like (Euclidean) input structures. GNNs operate on **node and edge features**, learning embeddings that capture the underlying graph structure.
+Graph Neural Networks (GNNs) are designed to handle **non-Euclidean, graph-structured data**, which cannot be effectively modeled by conventional neural networks that assume fixed, grid-like (Euclidean) input structures.
 
-One common type is the **spectral GNN**, which performs **graph convolutions in the frequency domain** using the **graph Laplacian**. Given a graph G=(V,E)\mathcal{G} = (\mathcal{V}, \mathcal{E})G=(V,E) with adjacency matrix AAA and degree matrix DDD, the Laplacian is defined as L=D−AL = D - AL=D−A and the normalized Laplacian as Lnorm=D−1/2LD−1/2L_\text{norm} = D^{-1/2} L D^{-1/2}Lnorm​=D−1/2LD−1/2. Spectral graph convolution transforms the input node features xxx into the spectral domain via the eigenvectors of LnormL_\text{norm}Lnorm​, applies a learnable filter gθg_\thetagθ​, and then transforms the result back to the spatial domain:
+GNNs operate on **node and edge features**, learning **embeddings** that capture the underlying graph structure.
 
-![[Pasted image 20251020103333.png]]
+### Spectral GNNs
 
-This approach enables the network to **capture complex dependencies and structural patterns** in graph data, making it suitable for applications like traffic networks where nodes represent intersections and edges represent road links.
+One common type is the **spectral GNN**, which performs graph convolutions in the **frequency domain** using the **graph Laplacian**.
+
+Given a graph \( \mathcal{G} = (\mathcal{V}, \mathcal{E}) \) with:
+
+- Adjacency matrix \( A \)
+- Degree matrix \( D \)
+
+The **unnormalized Laplacian** is defined as:
+
+$$
+L = D - A
+$$
+
+The **normalized Laplacian** is:
+
+$$
+L_{\text{norm}} = D^{-1/2} L D^{-1/2}
+$$
+
+Spectral graph convolution transforms the input node features \( x \) into the spectral domain via the **eigenvectors of** \( L_{\text{norm}} \), applies a learnable filter \( g_\theta \), and then transforms the result back to the spatial domain:
+
+$$
+g_\theta * x = U \, g_\theta(U^T x)
+$$
+
+Where:
+
+- \( U \) is the matrix of eigenvectors of \( L_{\text{norm}} \)
+- \( g_\theta \) is a learnable filter function
+- \( x \) is the input node feature matrix
+
+---
+
+## 🚦 Application Example
+
+This approach enables the network to capture **complex dependencies and structural patterns** in graph data, making it suitable for applications like **traffic networks**, where:
+
+- Nodes represent **intersections**
+- Edges represent **road links**
 
 - **Before**: Node features are “local” — they only describe each node itself.
     
