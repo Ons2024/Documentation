@@ -129,6 +129,6 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
         
 2. **Virtual Links** ${E}_v$
     
-    - These are synthetic edges between node pairs (u,v)(u, v).
+    - These are synthetic edges between node pairs (u,v).
         
     - They do **not** have predefined edge features, so the model learns them adaptively.
