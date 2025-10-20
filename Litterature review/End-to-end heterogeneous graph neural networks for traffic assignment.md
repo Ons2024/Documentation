@@ -13,4 +13,5 @@
 # introduction
 
 
- traditional graph models represent only physical road links, lacking direct connections between non-adjacent OD pairs.
+ traditional graph models represent only physical road links, lacking direct connections between non-adjacent OD pairs. 
+ => In their work they watr to add virtual link between an o d pairs that are 
