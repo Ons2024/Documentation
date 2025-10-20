@@ -84,8 +84,8 @@ $$
 
 Where:
 
-- \( U \) is the matrix of eigenvectors of \( L_{\text{norm}} \)
-- \( g_\theta \) is a learnable filter function
+- \( $U$ \) is the matrix of eigenvectors of \( L_{\text{norm}} \)
+- \( $g_\theta \) is a learnable filter function
 - \( x \) is the input node feature matrix
 
 
