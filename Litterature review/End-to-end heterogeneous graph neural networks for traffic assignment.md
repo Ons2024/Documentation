@@ -107,4 +107,5 @@ Where:
 
 
 ### Graph attention network
- the graph attention network (GAT) learns the graph feature by computing attention  for each node based on its features and the features of its neighbors
+. the graph attention network (GAT) learns the graph feature by computing attention  for each node based on its features and the features of its neighbors.
+. The graph attention mechanism can be stacked into multiple layers, with each layer learning increasingly complex representations of the graph. The attention mechanism allows the network to learn the different importance of different nodes within a neighborhood, which can improve model performance. 
