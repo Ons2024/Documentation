@@ -13,4 +13,4 @@
 # introduction
 
 
- 
+ traditional graph models represent only physical road links, lacking direct connections between non-adjacent OD pairs.
