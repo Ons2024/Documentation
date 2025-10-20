@@ -143,16 +143,4 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
 ## Summary in Plain Terms:
 
 
-- Raw features are sparse and unnormalized; they are encoded (using an embedding or feed-forward network) into dense, lower-dimensional vectors, e.g., Xn0
-
-- Nodes get transformed into Queries, Keys, and Values.
-    
-- Each red node (origin) uses its Query to ask which blue nodes it should focus on.
-    
-- The red node computes scores for its blue neighbors, learns which are important.
-    
-- It aggregates information from important blue neighbors, updates its own features.
-    
-- The adaptive weight β helps capture the strength of OD demand on virtual edges.
-    
-- Layer normalization and residual connections stabilize and enrich the learning.
+- 
