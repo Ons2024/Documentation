@@ -34,4 +34,8 @@ More recently, **neural networks** have become prominent due to their ability to
 
 <span style="color:rgb(255, 255, 0)">=> The data we have from the OD deman is not that accurate cause its not from real world sensors but from estimation and prediction techniques using filtters ai models which leads to <b>inaccurate demand estimation</b> and subsequent <b>errors in traffic flow prediction</b>.</span>
 
+- OD demand data often comes from **synthetic estimations, simulations, or calibration studies**, which means it can be **inaccurate, incomplete, or noisy**.
+    
+- These inaccuracies can indeed affect the **accuracy of the resulting traffic assignment** and the **validity of equilibrium predictions**.
+
 
