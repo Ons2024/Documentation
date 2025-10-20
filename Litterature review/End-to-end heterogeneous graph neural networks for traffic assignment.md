@@ -140,45 +140,5 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
 - This output feeds into the R-Encoder to integrate real road link effects for final traffic flow and capacity prediction.
 
 
-## Summary in Plain Terms:
+---
 
-1. **Start with OD Demand:**
-    
-    - You have an **origin-destination (OD) demand matrix** that tells you how many trips need to be made between each pair of locations (nodes).
-        
-2. **Build the Graph:**
-    
-    - Create a graph where **nodes** represent road intersections, and **edges** represent road links.
-        
-    - **Virtual edges** (extra connections) are added to represent possible demand flows between pairs of nodes—even when there's no physical road. This lets the model capture all OD demands.
-        
-3. **Assign Features:**
-    
-    - Each node includes features like OD demand and coordinates.
-        
-    - Each edge has features like travel time and road capacity.
-        
-4. **Feature Preprocessing:**
-    
-    - All these features are cleaned and turned into lower-dimensional vectors (embeddings) that the neural network can understand.
-        
-5. **V-Encoder (Attention Layers, repeated N times):**
-    
-    - The **V-Encoder** processes the node and virtual edge information using an attention mechanism:
-        
-        1. For each red node (the current node you're updating), use its feature vector to create a **Query**.
-            
-        2. For each blue node (the nodes it is connected to through virtual edges), use their feature vectors to create a **Key** and **Value**. <br> 
-        3.  **Learn Adaptive Edge Weight ($\beta$)**: Concatenate the feature vectors of red and blue nodes, pass through a small neural network (feed-forward layer), and get a learned adaptive weight. This step lets the model focus more on OD pairs with higher demand, making attention scores context-sensitive.
-            
-	       4. **Calculate Attention Scores**: For each virtual edge, use the red node's Query and the blue node's Key, multiplied by the adaptive weight, to get how much           attention (influence) each blue node gets.
-	    
-		5. **Normalize Attention Scores**: Apply softmax so attention weights over virtual neighbors sum to 1.
-		    
-		6. **Aggregate Information**: Update the red node's features by computing a weighted sum of blue nodes' Value vectors, using the normalized attention scores.
-		    
-		7. **Update Node Embedding**: Pass the aggregate through feedforward and normalization layers, with a residual connection, for stability and rich context.
-		8. **V-Encoder Output:**
-		    
-		    - The result is a set of updated node features (embeddings) that include the influence of OD demand patterns across the network. These are then used as input for further steps (such as handling real road connections and predicting traffic flows).
-		- 
