@@ -121,13 +121,13 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
 
 ![[Pasted image 20251020111842.png]]## Inputs to the V-Encoder
 
-1. **Node Features** xuL\mathbf{x}_u^L
+1. **Node Features** $x_u^L$
     
-    - These represent the embedding of node uu at layer LL.
+    - These represent the embedding of node u at layer L.
         
     - Derived from travel demand, virtual link structure, and network info.
         
-2. **Virtual Links** Ev\mathcal{E}_v
+2. **Virtual Links** ${E}_v$
     
     - These are synthetic edges between node pairs (u,v)(u, v).
         
