@@ -57,9 +57,9 @@ GNNs operate on **node and edge features**, learning **embeddings** that capture
 
 ### Spectral GNNs
 
-One common type is the **spectral GNN**, which performs graph convolutions in the **frequency domain** using the **graph Laplacian**.
+One common type is the **spectral GNN**, which performs graph convolutions in the <span style="color:rgb(255, 0, 0)"><b>frequency domain</b> using the <b>graph Laplacian</b>.</span>
 
-Given a graph \( \mathcal{G} = (\mathcal{V}, \mathcal{E}) \) with:
+Given a graph  ${G} = (\mathcal{V}, \mathcal{E})$ with:
 
 - Adjacency matrix \( A \)
 - Degree matrix \( D \)
@@ -88,14 +88,6 @@ Where:
 - \( g_\theta \) is a learnable filter function
 - \( x \) is the input node feature matrix
 
----
-
-## 🚦 Application Example
-
-This approach enables the network to capture **complex dependencies and structural patterns** in graph data, making it suitable for applications like **traffic networks**, where:
-
-- Nodes represent **intersections**
-- Edges represent **road links**
 
 - **Before**: Node features are “local” — they only describe each node itself.
     
