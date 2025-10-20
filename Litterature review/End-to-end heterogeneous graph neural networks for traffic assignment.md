@@ -142,3 +142,106 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
 
 ---
 
+## 1. Input preparation
+We start from the **OD demand** and **network information** (link capacities, free-flow times, node coordinates, etc.).  
+These are cleaned, normalized, and embedded into low-dimensional **node embeddings**:
+
+$$
+x_u \in \mathbb{R}^{d}, \quad \forall u \in \mathcal{V}
+$$
+
+---
+
+## 2. Role of the V-Encoder
+The **Virtual Encoder (V-Encoder)** operates on the **virtual links** (edges connecting origin–destination pairs).  
+Its purpose is to model how traffic demand between OD pairs influences flow through the network.
+
+---
+
+## 3. Project nodes into Query, Key, and Value spaces
+For each node \( u \), we create:
+
+$$
+q_u = x_u W^q, \quad
+k_u = x_u W^k, \quad
+v_u = x_u W^v
+$$
+
+where \( W^q, W^k, W^v \) are learnable projection matrices.  
+In this setting:
+- the **origin node** provides the **Query (Q)**,
+- the **destination node** provides the **Key (K)** and **Value (V)**.
+
+---
+
+## 4. Compute learnable adaptive edge weights
+For every **virtual link** \( (u,v) \in \mathcal{E}_v \), an adaptive weight \( \beta_{uv} \) is learned using the two node embeddings:
+
+$$
+\beta_{uv} = \text{FFN}([x_u \oplus x_v]; W_\beta, b_\beta)
+$$
+
+Here, \( $x_u \oplus x_v$\) is the concatenation of the origin and destination embeddings, and FFN is a small feed-forward network.
+
+Intuitively, \( \beta_{uv} \) acts as a measure of **OD demand importance** — higher OD demand → higher \( \beta_{uv} \).
+
+---
+
+## 5. Compute the attention score
+The unnormalized attention score for the virtual link \( (u,v) \) is:
+
+$$
+s_{uv} = \exp\!\left( \frac{q_u \cdot k_v}{\sqrt{d}} \, \beta_{uv} \right)
+$$
+
+This score depends on:
+- similarity between origin’s query \( q_u \) and destination’s key \( k_v \),
+- and the adaptive scaling factor \( \beta_{uv} \).
+
+---
+
+## 6. Normalize the attention weights
+Normalize across all outgoing virtual neighbors of node \( u \):
+
+$$
+\alpha_{uv} = \frac{s_{uv}}{\sum_{v' \in \mathcal{N}_o(u)} s_{uv'}}
+$$
+
+so that \( $\sum_v \alpha_{uv} = 1 \$).
+
+---
+
+## 7. Aggregate the value vectors
+Each node \( u \) aggregates the **Value** vectors of its virtual neighbors:
+
+$$
+z_u = \sum_{v \in \mathcal{N}_o(u)} \alpha_{uv} v_v
+$$
+
+---
+
+## 8. Feed-forward, normalization, and residual connection
+The aggregated feature is refined with a feed-forward network (FFN), layer normalization, and residual connection:
+
+$$
+x_u^{(L+1)} = x_u^{(L)} + \text{LayerNorm}\!\left( \text{FFN}(z_u) \right)
+$$
+
+This ensures both the original embedding and the learned contextual information are preserved.
+
+---
+
+## 9. Multi-head attention
+Multiple attention heads run in parallel, each producing an output \( x_u^{(L+1,i)} \).  
+These are concatenated:
+
+$$
+x_u^{(L+1)} = [x_u^{(L+1,1)} \oplus x_u^{(L+1,2)} \oplus \dots \oplus x_u^{(L+1,N_h)}]
+$$
+
+where \( N_h \) is the number of attention heads.
+
+---
+
+## 10. Stacking layers
+Several V-Encoder layers are stacked so that information can propagate through multiple virtual hops, enriching the representation of each node.
