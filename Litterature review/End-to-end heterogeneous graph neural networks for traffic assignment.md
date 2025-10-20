@@ -168,13 +168,14 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
         
         1. For each red node (the current node you're updating), use its feature vector to create a **Query**.
             
-        2. For each blue node (the nodes it is connected to through virtual edges), use their feature vectors to create a **Key** and **Value**.
+        2. For each blue node (the nodes it is connected to through virtual edges), use their feature vectors to create a **Key** and **Value**. <br
+        3. 1. **Learn Adaptive Edge Weight ($\beta$)**: Concatenate the feature vectors of red and blue nodes, pass through a small neural network (feed-forward layer), and get a learned adaptive weight. This step lets the model focus more on OD pairs with higher demand, making attention scores context-sensitive.
             
-        3. Calculate **attention scores** using the Query from red and Key from blue. These scores measure how important each blue node is for the red node, and are further adjusted by a learnable edge weight based on OD demand.
+        4. Calculate **attention scores** using the Query from red and Key from blue. These scores measure how important each blue node is for the red node, and are further adjusted by a learnable edge weight based on OD demand.
             
-        4. For each red node, combine (aggregate) the Value vectors from the blue nodes, weighted by the attention scores. This updates the red node's feature.
+        5. For each red node, combine (aggregate) the Value vectors from the blue nodes, weighted by the attention scores. This updates the red node's feature.
             
-        5. Repeat the attention step for several layers (N times) to allow information to move throughout the graph and capture complex interactions between OD pairs.
+        6. Repeat the attention step for several layers (N times) to allow information to move throughout the graph and capture complex interactions between OD pairs.
             
 6. **V-Encoder Output:**
     
