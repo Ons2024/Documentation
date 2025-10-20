@@ -46,3 +46,10 @@ However, these conventional models **assume accurate OD demand data**, and when 
 Recent advances in **neural networks** offer promising alternatives, as they excel in **data reconstruction and generalization**. Among them, **convolutional neural networks (CNNs)** have been applied to TAPs by modeling transportation networks as grid maps, especially under incomplete OD demand conditions (Fan et al., 2023). Meanwhile, **graph neural networks (GNNs)**—which naturally represent spatial relationships in network structures—have also been adopted for traffic assignment tasks (Rahman and Hasan, 2023).
 
 
+# Technical background 
+
+To address this challenge, GNNs are specifically designed to handle graph-structured data. It operates on the node features and edge features and learns to extract embedding from nodes and edges, aiming to capture the underlying graph structure
+
+
+
+
