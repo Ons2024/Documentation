@@ -117,3 +117,5 @@ A **heterogeneous graph** is a graph that contains **multiple types of nodes and
 
 <span style="color:rgb(255, 255, 0)">`here why the graph is heterogenous ? The heterogeneous graph for traffic assignment consists of one type of node representing the intersections of road segments and two edge types: real links and virtual links`</span>
 
+Whays the pupose of those 
+
