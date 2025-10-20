@@ -142,5 +142,41 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
 
 ## Summary in Plain Terms:
 
-
+1. **Start with OD Demand:**
+    
+    - You have an **origin-destination (OD) demand matrix** that tells you how many trips need to be made between each pair of locations (nodes).
+        
+2. **Build the Graph:**
+    
+    - Create a graph where **nodes** represent road intersections, and **edges** represent road links.
+        
+    - **Virtual edges** (extra connections) are added to represent possible demand flows between pairs of nodes—even when there's no physical road. This lets the model capture all OD demands.
+        
+3. **Assign Features:**
+    
+    - Each node includes features like OD demand and coordinates.
+        
+    - Each edge has features like travel time and road capacity.
+        
+4. **Feature Preprocessing:**
+    
+    - All these features are cleaned and turned into lower-dimensional vectors (embeddings) that the neural network can understand.
+        
+5. **V-Encoder (Attention Layers, repeated N times):**
+    
+    - The **V-Encoder** processes the node and virtual edge information using an attention mechanism:
+        
+        1. For each red node (the current node you're updating), use its feature vector to create a **Query**.
+            
+        2. For each blue node (the nodes it is connected to through virtual edges), use their feature vectors to create a **Key** and **Value**.
+            
+        3. Calculate **attention scores** using the Query from red and Key from blue. These scores measure how important each blue node is for the red node, and are further adjusted by a learnable edge weight based on OD demand.
+            
+        4. For each red node, combine (aggregate) the Value vectors from the blue nodes, weighted by the attention scores. This updates the red node's feature.
+            
+        5. Repeat the attention step for several layers (N times) to allow information to move throughout the graph and capture complex interactions between OD pairs.
+            
+6. **V-Encoder Output:**
+    
+    - The result is a set of updated node features (embeddings) that include the influence of OD demand patterns across the network. These are then used as input for further steps (such as handling real road connections and predicting traffic flows).
 - 
