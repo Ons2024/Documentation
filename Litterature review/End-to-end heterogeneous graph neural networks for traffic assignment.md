@@ -153,6 +153,6 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
     
 - It aggregates information from important blue neighbors, updates its own features.
     
-- The adaptive weight ββ helps capture the strength of OD demand on virtual edges.
+- The adaptive weight β helps capture the strength of OD demand on virtual edges.
     
 - Layer normalization and residual connections stabilize and enrich the learning.
