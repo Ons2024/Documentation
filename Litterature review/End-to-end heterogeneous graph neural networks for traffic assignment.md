@@ -32,7 +32,7 @@ The model introduces several key innovations:
 
 More recently, **neural networks** have become prominent due to their ability to capture complex spatial–temporal patterns. For example, models combining **graph neural networks with Kalman filters** and **3D convolutional neural networks (CNNs)** have shown improved performance in OD demand prediction. However, **data quality issues**—such as sensor failures or missing data—remain a major challenge, often leading to **inaccurate demand estimation** and subsequent **errors in traffic flow prediction**.
 
-the dqtq thqt ze hqve fro; the OD de;qnd is
+=> The data we have from the OD deman is not that accurate cause its not from real world sensors but from estimation and pred
 
 
 
