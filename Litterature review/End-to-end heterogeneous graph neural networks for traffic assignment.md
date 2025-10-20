@@ -84,9 +84,9 @@ $$
 
 Where:
 
-- \( $U$ \) is the matrix of eigenvectors of \( L_{\text{norm}} \)
-- \( $g_\theta \) is a learnable filter function
-- \( x \) is the input node feature matrix
+- \( $U$ \) is the matrix of eigenvectors of \( $L_{\text{norm}}$ \)
+- \( $g_\theta$ \) is a learnable filter function
+- \( $x$ \) is the input node feature matrix
 
 
 - **Before**: Node features are “local” — they only describe each node itself.
