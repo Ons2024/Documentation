@@ -7,5 +7,10 @@
 
 - An **a<span style="color:rgb(255, 0, 0)">daptive graph attention mechanism**</span> combined with **virtual links** connecting origin–destination pairs, allowing better capture of spatial traffic patterns.
     
-- Integration of the <span style="color:rgb(255, 0, 0)"><b>node-based flow conservation law</b> into the loss function</span>, ensuring physically consistent predictio
+- Integration of the <span style="color:rgb(255, 0, 0)"><b>node-based flow conservation law</b> into the loss function</span>, ensuring physically consistent prediction
+
+
+# introduction
+
+
  
