@@ -171,14 +171,14 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
         2. For each blue node (the nodes it is connected to through virtual edges), use their feature vectors to create a **Key** and **Value**. <br> 
         3.  **Learn Adaptive Edge Weight ($\beta$)**: Concatenate the feature vectors of red and blue nodes, pass through a small neural network (feed-forward layer), and get a learned adaptive weight. This step lets the model focus more on OD pairs with higher demand, making attention scores context-sensitive.
             
-	       4. **Calculate Attention Scores**: For each virtual edge, use the red node's Query and the blue node's Key, multiplied by the adaptive weight, to get how much attention (influence) each blue node gets.
+	       4. **Calculate Attention Scores**: For each virtual edge, use the red node's Query and the blue node's Key, multiplied by the adaptive weight, to get how much           attention (influence) each blue node gets.
 	    
-6. **Normalize Attention Scores**: Apply softmax so attention weights over virtual neighbors sum to 1.
-    
-7. **Aggregate Information**: Update the red node's features by computing a weighted sum of blue nodes' Value vectors, using the normalized attention scores.
-    
-8. **Update Node Embedding**: Pass the aggregate through feedforward and normalization layers, with a residual connection, for stability and rich context.
-9. **V-Encoder Output:**
-    
-    - The result is a set of updated node features (embeddings) that include the influence of OD demand patterns across the network. These are then used as input for further steps (such as handling real road connections and predicting traffic flows).
-- 
+		5. **Normalize Attention Scores**: Apply softmax so attention weights over virtual neighbors sum to 1.
+		    
+		6. **Aggregate Information**: Update the red node's features by computing a weighted sum of blue nodes' Value vectors, using the normalized attention scores.
+		    
+		7. **Update Node Embedding**: Pass the aggregate through feedforward and normalization layers, with a residual connection, for stability and rich context.
+		8. **V-Encoder Output:**
+		    
+		    - The result is a set of updated node features (embeddings) that include the influence of OD demand patterns across the network. These are then used as input for further steps (such as handling real road connections and predicting traffic flows).
+		- 
