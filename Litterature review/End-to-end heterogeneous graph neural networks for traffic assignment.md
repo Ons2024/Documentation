@@ -1,6 +1,6 @@
  GNNs are generally constrained to a fixed graph size and 130 often require workarounds-such as transfer learning or padding with dummy nodes, to handle networks of different 131 sizes
 
-
+<span style="color:rgb(0, 112, 192)">Paper super interesting </span>
 # Abstract 
 
  The paper introduces a new **end-to-end surrogate model** for <span style="color:rgb(255, 0, 0)">solving the <b>user equilibrium traffic assignment problem</b></span> using **heterogeneous graph neural networks (HGNNs)**. Traditional methods struggle with large-scale networks, but this model overcomes those challenges through:
