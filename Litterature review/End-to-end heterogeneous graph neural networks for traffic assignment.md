@@ -3,4 +3,5 @@
 
 # Abstract 
 
-They propose a novel end-to-end surrogate model for traffic assignment, specifically user equilibrium traffic assignment problems.
+ - In this paper, we leverage the power of heterogeneous graph neural networks to propose an end-to-end surrogate model for traffic assignment, specifically user equilibrium traffic assignment problems.
+ - 
