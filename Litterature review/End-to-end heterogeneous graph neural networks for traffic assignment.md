@@ -1,0 +1,2 @@
+ GNNs are generally constrained to a fixed graph size and 130 often require workarounds-such as transfer learning or padding with dummy nodes, to handle networks of different 131 sizes
+
