@@ -138,3 +138,127 @@ Whats the pupose of those virtual links ?  so its there tto modele the propagati
 - The output Hn0Hn0 is an enriched node feature matrix capturing demand-based structural information.
     
 - This output feeds into the R-Encoder to integrate real road link effects for final traffic flow and capacity prediction.
+
+
+# Virtual Graph Encoder (V-Encoder) for Traffic Assignment
+
+## 1. Input: Node and Edge Features
+
+- Graph nodes represent **intersections**, each with features like **origin-destination (OD) demand** and **coordinates**.
+- Edges are of two types:
+  - **Real road links**
+  - **Virtual links** representing OD demands
+
+- Node features:  $$
+  \mathbf{X}_n
+  $$
+
+- Edge features (real):  
+  $$
+  \mathbf{X}_{e,r}
+  $$
+
+These raw features are initially **sparse and unnormalized**. They are encoded into **lower-dimensional dense vectors** (embeddings) to capture important properties and semantics.
+
+---
+
+## 2. Prepare Node Embeddings for V-Encoder
+
+The processed node embeddings:  
+$$
+\mathbf{X}_n^0
+$$  
+serve as input to the V-Encoder.
+
+Each node \( u \) has a feature vector:  
+$$
+\mathbf{x}_u
+$$  
+that summarizes its attributes.
+
+---
+
+## 3. V-Encoder: Transform Node Features into Query, Key, and Value
+
+For each node:
+
+- Query vector:  
+  $$
+  \mathbf{q}_u = \mathbf{x}_u W_{v,Q}
+  $$
+
+- Key vector:  
+  $$
+  \mathbf{k}_v = \mathbf{x}_v W_{v,K}
+  $$
+
+- Value vector:  
+  $$
+  \mathbf{v}_v = \mathbf{x}_v W_{v,V}
+  $$
+
+In the V-Encoder, **attention is computed** between a red node's query and blue nodes' keys and values.
+
+---
+
+## 4. Compute Adaptive Virtual Edge Weight
+
+Virtual links have no raw features, so the model **learns an edge weight** \( \beta_e \) for each virtual edge \( e = (u, v) \).
+
+This is done by **concatenating** node features and passing them through a feed-forward network:
+
+$$
+\beta_e = \text{FFN}([\mathbf{x}_u \oplus \mathbf{x}_v])
+$$
+
+---
+
+## 5. Calculate Attention Scores for Virtual Links
+
+For each virtual edge, compute the attention score:
+
+$$
+s_e = \exp\left( \frac{\mathbf{q}_u \cdot \mathbf{k}_v^T}{\sqrt{d}} \cdot \beta_e \right)
+$$
+
+This score reflects how important the destination node \( v \) is to the source node \( u \).
+
+---
+
+## 6. Normalize Attention Scores
+
+Normalize scores over neighboring nodes using softmax:
+
+$$
+\alpha_{uv} = \frac{s_e}{\sum_{v' \in \mathcal{N}_o(u)} s_{(u,v')}}
+$$
+
+This ensures that attention weights **sum to 1**.
+
+---
+
+## 7. Aggregate Values from Blue Nodes to Red Node
+
+Update the red node's embedding by weighted sum of blue nodes' value vectors:
+
+$$
+\mathbf{z}_u = \sum_{v \in \mathcal{N}_o(u)} \alpha_{uv} \mathbf{v}_v
+$$
+
+---
+
+## 8. Feed-Forward Network, Residual Connection, and Normalization
+
+Pass the aggregated vector through FFN and LayerNorm, then add a residual connection:
+
+$$
+\mathbf{x}_u' = \mathbf{x}_u + \text{LayerNorm}(\text{FFN}(\mathbf{z}_u))
+$$
+
+---
+
+## 9. Multi-head Attention and Stacking Layers
+
+- Multiple attention heads operate in parallel.
+- Their outputs are **concatenated** for richer representation.
+- Several V-Encoder layers are **stacked** to propagate information deeper into the graph.
