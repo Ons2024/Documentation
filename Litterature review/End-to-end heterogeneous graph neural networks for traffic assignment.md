@@ -14,4 +14,13 @@
 
 
  traditional graph models represent only physical road links, lacking direct connections between non-adjacent OD pairs. 
- => In their work they watr to add virtual link between an o d pairs that are 
+ => In their work they watr to add virtual link between an o d pairs that are not physically connected 
+
+The model introduces several key innovations:
+
+1. A **heterogeneous graph structure** that connects OD nodes through both physical and virtual links, combined with an **adaptive attention mechanism** to model spatial dependencies.
+    
+2. Integration of **flow conservation laws** into the training process to ensure physically consistent and accurate flow predictions.
+    
+3. Enhanced **generalization to unseen networks** through the combination of virtual links and conservation-based regularization
+
