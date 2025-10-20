@@ -107,3 +107,4 @@ Where:
 
 
 ### Graph attention network
+ the graph attention network (GAT) learns the graph feature by computing attention  for each node based on its features and the features of its neighbors
