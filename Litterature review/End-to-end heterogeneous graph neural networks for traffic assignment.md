@@ -38,4 +38,11 @@ More recently, **neural networks** have become prominent due to their ability to
     
 - These inaccuracies can indeed affect the **accuracy of the resulting traffic assignment** and the **validity of equilibrium predictions**.
 
+## Traffic assignment problem
+The **traffic assignment problem (TAP)** is essential for understanding traffic flow patterns and managing congestion. Traditional approaches have focused on improving **computational efficiency and convergence** in large-scale networks. Examples include the **conjugate gradient projection method** (Lee et al., 2003) and the **reduced gradient algorithm** (Babazadeh et al., 2020), which simplify computations by focusing on key paths.
+
+However, these conventional models **assume accurate OD demand data**, and when such information is **incomplete or missing**, they tend to **underestimate link-level traffic flows**.
+
+Recent advances in **neural networks** offer promising alternatives, as they excel in **data reconstruction and generalization**. Among them, **convolutional neural networks (CNNs)** have been applied to TAPs by modeling transportation networks as grid maps, especially under incomplete OD demand conditions (Fan et al., 2023). Meanwhile, **graph neural networks (GNNs)**—which naturally represent spatial relationships in network structures—have also been adopted for traffic assignment tasks (Rahman and Hasan, 2023).
+
 
