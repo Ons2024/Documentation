@@ -119,4 +119,16 @@ A **heterogeneous graph** is a graph that contains **multiple types of nodes and
 
 Whats the pupose of those virtual links ?  so its there tto modele the propagation of the traffic across the network  and lets information from the OD demand influence nodes far apart in the physical network.
 
-![[Pasted image 20251020111842.png]]
+![[Pasted image 20251020111842.png]]## Inputs to the V-Encoder
+
+1. **Node Features** xuL\mathbf{x}_u^L
+    
+    - These represent the embedding of node uu at layer LL.
+        
+    - Derived from travel demand, virtual link structure, and network info.
+        
+2. **Virtual Links** Ev\mathcal{E}_v
+    
+    - These are synthetic edges between node pairs (u,v)(u, v).
+        
+    - They do **not** have predefined edge features, so the model learns them adaptively.
