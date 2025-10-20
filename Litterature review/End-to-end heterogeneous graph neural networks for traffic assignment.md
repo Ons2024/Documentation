@@ -50,6 +50,8 @@ Recent advances in **neural networks** offer promising alternatives, as they exc
 
 To address this challenge, GNNs are specifically designed to handle graph-structured data. It operates on the node features and edge features and learns to extract embedding from nodes and edges, aiming to capture the underlying graph structure
 
+## GCN 
+
 
 
 
