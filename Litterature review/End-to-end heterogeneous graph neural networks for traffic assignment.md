@@ -26,5 +26,13 @@ The model introduces several key innovations:
 
 # literature
 
-##
+## OD demand estimation
+
+**Origin–destination (OD) demand estimation** is challenging because traffic sensors cannot directly measure travel demand. Researchers therefore infer OD demand from aggregated roadway data using various models. Traditional approaches include **time-series models** such as ARIMA (for forecasting regional demand) and **state estimation techniques** like the **Kalman filter**, as well as **optimization-based methods** such as **quadratic programming** solved via the alternating direction method of multipliers (ADMM).
+
+More recently, **neural networks** have become prominent due to their ability to capture complex spatial–temporal patterns. For example, models combining **graph neural networks with Kalman filters** and **3D convolutional neural networks (CNNs)** have shown improved performance in OD demand prediction. However, **data quality issues**—such as sensor failures or missing data—remain a major challenge, often leading to **inaccurate demand estimation** and subsequent **errors in traffic flow prediction**.
+
+the dqtq thqt ze hqve fro; the OD de;qnd is
+
+
 
