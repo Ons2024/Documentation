@@ -3,5 +3,9 @@
 
 # Abstract 
 
- - In this paper, we leverage the power of heterogeneous graph neural networks to propose an end-to-end surrogate model for traffic assignment, specifically user equilibrium traffic assignment problems.
- - 
+ The paper introduces a new **end-to-end surrogate model** for <span style="color:rgb(255, 0, 0)">solving the <b>user equilibrium traffic assignment problem</b></span> using **heterogeneous graph neural networks (HGNNs)**. Traditional methods struggle with large-scale networks, but this model overcomes those challenges through:
+
+- An **a<span style="color:rgb(255, 0, 0)">daptive graph attention mechanism**</span> combined with **virtual links** connecting origin–destination pairs, allowing better capture of spatial traffic patterns.
+    
+- Integration of the <span style="color:rgb(255, 0, 0)"><b>node-based flow conservation law</b> into the loss function</span>, ensuring physically consistent predictio
+ 
