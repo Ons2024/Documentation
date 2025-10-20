@@ -112,3 +112,5 @@ Where:
 
 
 ## hetegerogeneous graph 
+
+A **heterogeneous graph** is a graph that contains **multiple types of nodes and/or multiple types of edges**, each representing different entities and relationships.
