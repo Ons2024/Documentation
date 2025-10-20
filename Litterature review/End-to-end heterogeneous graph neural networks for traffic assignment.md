@@ -207,7 +207,7 @@ $$
 \alpha_{uv} = \frac{s_{uv}}{\sum_{v' \in \mathcal{N}_o(u)} s_{uv'}}
 $$
 
-so that \( $\sum_v \alpha_{uv} = 1 \$).
+so that \( $\sum_v \alpha_{uv} = 1$).
 
 ---
 
