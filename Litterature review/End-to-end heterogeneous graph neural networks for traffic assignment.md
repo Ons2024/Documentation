@@ -96,5 +96,12 @@ Where:
 - In other words: yes, we go from **N raw features → M learned features** that **capture graph connectivity and patterns**, which helps tasks like traffic assignment, where flows depend on the network structure.
 
 
+ CONCULUSION FOR ME 
+- Node features are transformed into the **spectral domain** using the **graph Laplacian eigenvectors**.
+    
+- A **filter** is applied in that domain to capture **structural patterns**.
+    
+- Then, the result is transformed back to the **spatial domain** to get the updated node features.
+
 
 
